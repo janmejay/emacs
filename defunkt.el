@@ -24,4 +24,5 @@
 (vendor 'twittering-mode)
 (vendor 'textile-mode)
 (vendor 'textmate)
+(vendor 'haml-mode)
 (textmate-mode)
