@@ -6,7 +6,7 @@
   ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 163 t)
- '(cua-mode nil nil (cua-base))
+ '(cua-mode t nil (cua-base))
  '(default-frame-alist (quote ((tool-bar-lines . 0) (foreground-color . "white") (background-color . "black") (menu-bar-lines . 1) (font . "-apple-inconsolata-medium-r-normal--20-160-72-72-m-160-iso10646-1"))))
  '(erc-modules (quote (autojoin button completion fill irccontrols match menu netsplit noncommands readonly ring scrolltobottom stamp track)))
  '(javascript-shell-command "johnson")
