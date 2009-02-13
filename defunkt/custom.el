@@ -16,8 +16,11 @@
  '(js2-enter-indents-newline t)
  '(js2-strict-missing-semi-warning nil)
  '(pc-selection-mode t nil (pc-select))
+ '(show-trailing-whitespace t)
+ '(standard-indent 2)
  '(tabbar-mode t nil (tabbar))
- '(transient-mark-mode t))
+ '(transient-mark-mode t)
+ '(whitespace-global-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,8 +30,7 @@
  '(emacs-lisp-mode-default ((t (:inherit autoface-default :slant normal :weight normal))) t)
  '(minibuffer-prompt ((((background dark)) (:foreground "cyan"))))
  '(mode-line ((t (:inherit aquamacs-variable-width :background "grey25" :foreground "grey75" :width normal))))
- '(modeline ((t (:inherit aquamacs-variable-width :background "#432" :foreground "grey85" :width normal))))
- '(modeline-inactive ((t (:inherit aquamacs-variable-width :background "grey10" :foreground "grey30" :box (:line-width -1 :color "grey20") :strike-through nil :underline nil :slant normal :weight normal :width normal))) t)
+ '(mode-line-inactive ((t (:inherit aquamacs-variable-width :background "grey10" :foreground "grey30" :box (:line-width -1 :color "grey20") :strike-through nil :underline nil :slant normal :weight normal :width normal))))
  '(region ((((class color) (min-colors 88) (background dark)) (:background "#321"))))
  '(tabbar-default ((t (:inherit nil :background "gray20" :foreground "gray60" :box nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "lucida grande"))))
  '(tabbar-selected ((t (:inherit tabbar-default :background "#432" :foreground "gray80" :box (:line-width 2 :color "#432")))))
@@ -36,4 +38,5 @@
  '(tabbar-separator ((t (:inherit tabbar-default :background "grey50" :foreground "grey50" :height 1.0))))
  '(tabbar-unselected ((t (:inherit tabbar-default :background "gray25"))))
  '(tabbar-unselected-highlight ((t (:foreground "grey75"))))
- '(text-mode-default ((t (:inherit autoface-default :strike-through nil :underline nil :slant normal :weight normal :width normal))) t))
+ '(text-mode-default ((t (:inherit autoface-default :strike-through nil :underline nil :slant normal :weight normal :width normal))) t)
+ '(trailing-whitespace ((((class color) (background dark)) (:background "#042020")))))
