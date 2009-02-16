@@ -25,3 +25,6 @@
 [submodule "vendor/sunburst"]
 	path = vendor/sunburst
 	url = git://gist.github.com/61465.git
+[submodule "vendor/rhtml-mode"]
+	path = vendor/rhtml-mode
+	url = git://github.com/eschulte/rhtml.git
