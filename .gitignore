@@ -3,3 +3,4 @@ url/*
 local.el
 *.elc
 tutorial/*
+.emacs_project
