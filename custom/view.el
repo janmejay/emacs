@@ -28,7 +28,9 @@
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(case-fold-search nil)
- '(cua-mode nil nil (cua-base)))
+ '(cua-mode nil nil (cua-base))
+ '(transient-mark-mode t)
+ '(show-paren-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
