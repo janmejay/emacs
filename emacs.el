@@ -1,12 +1,17 @@
 (add-to-list 'load-path 
              "~/.emacs.d")
+(add-to-list 'load-path 
+	     "~/.emacs.d/vendor")
+(add-to-list 'load-path 
+	     "~/.emacs.d/vendor/ido")
+(add-to-list 'load-path 
+	     "~/.emacs.d/vendor/ecb")
 
-(load "vendor/cedet/common/cedet")
+(load "cedet/common/cedet")
 (semantic-load-enable-excessive-code-helpers)
 (semantic-load-enable-semantic-debugging-helpers)
 
-(add-to-list 'load-path
-             "~/.emacs.d/vendor/ecb")
 (require 'ecb)
 
 (load "custom/view")
+(load "custom/behaviour")

@@ -24,7 +24,9 @@
  '(ecb-layout-window-sizes (quote (("left3" (0.1921182266009852 . 0.35294117647058826) (0.1921182266009852 . 0.3137254901960784) (0.1921182266009852 . 0.3137254901960784)))))
  '(ecb-options-version "2.33beta2")
  '(ecb-source-path (cons "~/emacs_extensions" (find-all-emacs-projects)))
- '(ecb-tip-of-the-day nil))
+ '(ecb-tip-of-the-day nil)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,3 +42,7 @@
 ;;(global-set-key (kbd "<f7>") 'ecb-goto-window-methods)
 
 (set-frame-size-according-to-resolution)
+
+(require 'window-numbering)
+(window-numbering-mode 1)
+
