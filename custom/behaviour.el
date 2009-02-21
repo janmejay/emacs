@@ -43,8 +43,19 @@
 ;; run the test when saving the file
 (setq test-case-run-after-saving t)
 
-;;;;;;;;;;rinari
-(require 'rinari)
+;;;;;;;;;;ruby & rinari
+
+
+(load "rinari/rinari")
+(load "collection/ruby/ruby-mode")
+(load "collection/ruby/inf-ruby")
+(load "collection/ruby/ruby-compilation")
+(require 'cl)
+(require 'toggle)
+(require 'find-file-in-project)
+(require 'rinari-movement)
+;;(load "collection/ruby/rinari")
+(define-key ruby-mode-map (kbd "<return>") 'ruby-reindent-then-newline-and-indent)
 
 ;;renari html support tweak
 (define-key rinari-minor-mode-map
