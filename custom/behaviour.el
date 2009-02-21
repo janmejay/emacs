@@ -45,7 +45,6 @@
 
 ;;;;;;;;;;ruby & rinari
 
-
 (load "rinari/rinari")
 (load "collection/ruby/ruby-mode")
 (load "collection/ruby/inf-ruby")
@@ -53,7 +52,7 @@
 (require 'cl)
 (require 'toggle)
 (require 'find-file-in-project)
-(require 'rinari-movement)
+;;(require 'rinari-movement)
 ;;(load "collection/ruby/rinari")
 (define-key ruby-mode-map (kbd "<return>") 'ruby-reindent-then-newline-and-indent)
 
