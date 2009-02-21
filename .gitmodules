@@ -25,9 +25,6 @@
 [submodule "vendor/ecb"]
 	path = vendor/ecb
 	url = git://github.com/pat-maddox/ecb.git
-[submodule "vendor/ido"]
-	path = vendor/ido
-	url = git://github.com/janmejay/ido.git
 [submodule "vendor/goodies"]
 	path = vendor/goodies
 	url = git://github.com/janmejay/emacs_goodies.git
