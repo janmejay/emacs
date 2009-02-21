@@ -22,3 +22,9 @@
 
 (ido-mode t)
 (setq ido-enable-flex-matching t)
+
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+
+(load "goodies/css-mode")

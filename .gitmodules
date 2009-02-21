@@ -28,3 +28,6 @@
 [submodule "vendor/goodies"]
 	path = vendor/goodies
 	url = git://github.com/janmejay/emacs_goodies.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = git://github.com/defunkt/yasnippet.git

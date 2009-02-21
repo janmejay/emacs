@@ -5,6 +5,8 @@
 (add-to-list 'load-path 
 	     "~/.emacs.d/vendor/goodies")
 (add-to-list 'load-path 
+	     "~/.emacs.d/vendor/yasnippet")
+(add-to-list 'load-path 
 	     "~/.emacs.d/vendor/ecb")
 
 (load "cedet/common/cedet")
