@@ -26,7 +26,9 @@
  '(ecb-source-path (cons "~/emacs_extensions" (find-all-emacs-projects)))
  '(ecb-tip-of-the-day nil)
  '(scroll-bar-mode nil)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(case-fold-search nil)
+ '(cua-mode nil nil (cua-base)))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
