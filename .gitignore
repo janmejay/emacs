@@ -5,7 +5,7 @@ local.el
 tutorial/*
 .emacs_project
 semantic.cache
-semantic.cache~cache
+semantic.cache~
 **/semantic.cache
 **/semantic.cache~
 auto-save-list
