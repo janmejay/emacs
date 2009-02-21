@@ -31,3 +31,9 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = git://github.com/defunkt/yasnippet.git
+[submodule "vendor/collection"]
+	path = vendor/collection
+	url = git://github.com/georgi/elisp.git
+[submodule "vendor/jump"]
+	path = vendor/jump
+	url = git://github.com/eschulte/jump.el.git
