@@ -1,17 +1,10 @@
-(add-to-list 'load-path 
-             "~/.emacs.d")
-(add-to-list 'load-path 
-             "~/.emacs.d/vendor")
-(add-to-list 'load-path 
-             "~/.emacs.d/vendor/goodies")
-(add-to-list 'load-path
-             "~/.emacs.d/vendor/collection")
-(add-to-list 'load-path
-             "~/.emacs.d/vendor/jump")
-(add-to-list 'load-path 
-	     "~/.emacs.d/vendor/yasnippet")
-(add-to-list 'load-path 
-	     "~/.emacs.d/vendor/ecb")
+(nconc load-path '("~/.emacs.d"
+                   "~/.emacs.d/vendor"
+                   "~/.emacs.d/vendor/goodies"
+                   "~/.emacs.d/vendor/collection"
+                   "~/.emacs.d/vendor/jump"
+                   "~/.emacs.d/vendor/yasnippet"
+                   "~/.emacs.d/vendor/ecb"))
 
 (load "cedet/common/cedet")
 (semantic-load-enable-excessive-code-helpers)
