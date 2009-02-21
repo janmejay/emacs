@@ -3,7 +3,7 @@
 (add-to-list 'load-path 
 	     "~/.emacs.d/vendor")
 (add-to-list 'load-path 
-	     "~/.emacs.d/vendor/ido")
+	     "~/.emacs.d/vendor/goodies")
 (add-to-list 'load-path 
 	     "~/.emacs.d/vendor/ecb")
 

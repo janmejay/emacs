@@ -28,3 +28,6 @@
 [submodule "vendor/ido"]
 	path = vendor/ido
 	url = git://github.com/janmejay/ido.git
+[submodule "vendor/goodies"]
+	path = vendor/goodies
+	url = git://github.com/janmejay/emacs_goodies.git
