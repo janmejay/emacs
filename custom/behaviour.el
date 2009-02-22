@@ -155,3 +155,16 @@
 (defalias 'rs 'replace-string)
 
 (defalias 'el 'ielm)
+
+;;;;;;paste with indent
+(defadvice yank (after indent-region activate)
+      (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
+          (let ((mark-even-if-inactive t))
+            (indent-region (region-beginning) (region-end) nil))))
+
+(defadvice yank-pop (after indent-region activate)
+      (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
+          (let ((mark-even-if-inactive t))
+            (indent-region (region-beginning) (region-end) nil))))
+
+
