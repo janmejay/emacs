@@ -89,3 +89,8 @@
   (load-file (find-emacs-project-file-for file-path)))
 
 
+(defun dumb-indent-without-reindent-of-current-line ()
+  (interactive)
+  (let* ((indent-lvl (current-indentation)))
+    (newline-and-indent)
+    (indent-to indent-lvl)))

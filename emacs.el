@@ -16,8 +16,8 @@
 (require 'ecb)
 
 (load "custom/view")
-(load "custom/behaviour")
 (load "custom/additions")
+(load "custom/behaviour")
 
 (require 'tabbar)
 (require 'jump)

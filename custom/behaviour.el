@@ -158,13 +158,15 @@
 
 ;;;;;;paste with indent
 (defadvice yank (after indent-region activate)
-      (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
-          (let ((mark-even-if-inactive t))
-            (indent-region (region-beginning) (region-end) nil))))
+  (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
+      (let ((mark-even-if-inactive t))
+        (indent-region (region-beginning) (region-end) nil))))
 
 (defadvice yank-pop (after indent-region activate)
-      (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
-          (let ((mark-even-if-inactive t))
-            (indent-region (region-beginning) (region-end) nil))))
-
-
+  (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
+      (let ((mark-even-if-inactive t))
+        (indent-region (region-beginning) (region-end) nil))))
+(global-set-key (kbd "C-j") 'dumb-indent-without-reindent-of-current-line)
+(define-key ruby-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
+;;(define-key c++-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
+;;(define-key lisp-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
