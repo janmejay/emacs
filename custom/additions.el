@@ -45,10 +45,6 @@
   (populate-emacs-project-files-table (or file (emacs-proj-root)))
   emacs-project-files-table)
 
-(global-set-key (kbd "C-M-z") 'emacs-project-find)
-(global-set-key (kbd "C-M-y") 'longlines-mode)
-
-
 ;;find tests
 (defun find-test-in-project (file)
   (interactive (list (if (functionp 'ido-completing-read)
@@ -69,8 +65,6 @@
        (spec-dir (concat (emacs-proj-root) "/spec")))
        (cond ((file-exists-p test-dir) test-dir)
              ((file-exists-p spec-dir) spec-dir))))
-
-(global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
 
 (custom-set-variables
   '(semanticdb-default-file-name ".semantic.cache")

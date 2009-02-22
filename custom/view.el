@@ -50,3 +50,46 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 
+
+;; Set encoding to UTF-8
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; Useful key strokes
+(global-set-key "\M-g" 'goto-line)
+(global-set-key "\M-p" 'emacs-wiki-change-project)
+
+;; Anti Aliasing
+;; (setq mac-allow-anti-aliasing t)
+(setq mac-allow-anti-aliasing nil)
+
+;; Frame title : set to buffer name
+(setq frame-title-format "Emacs - %f ")
+(setq icon-title-format  "Emacs - %b")
+
+;; Editor Preferences
+(column-number-mode t)  ;; Show column numbers
+(menu-bar-mode nil)     ;; Disable menu bar
+(setq-default truncate-lines t)
+(setq scroll-step 1
+      scroll-margin 3
+      scroll-conservatively 10000)   ;; Scrolling 
+(show-paren-mode t)                  ;; Highlight parens 
+(setq show-paren-style 'parentheses) ;; Shor parens
+(blink-cursor-mode nil)              ;; Disable blinking of cursor
+(fset 'yes-or-no-p 'y-or-n-p)        ;; Alias Y and N
+(setq message-log-max 100)           ;; Set log buffer size
+;; (resize-minibuffer-mode 1) ;; Resize buffer depending on text
+(follow-mode t)                     ;; Easier editing of longs files
+(setq inhibit-startup-message t)    ;; Disable start up message
+(setq search-highlight t)           ;; Highlight search results
+(setq kill-whole-line t)            ;; Kill whole line
+(setq backup-inhibited t)           ;; Never backup
+(setq column-number-mode t)         ;; Show column numbers
+(setq line-number-mode 1)           ;; Show line numbers
+(setq-default indent-tabs-mode nil) ;; Use spaces for tabs
+(setq visible-bell t)               ;; Visable bells
+;; (kill-buffer "*scratch*") ;; Kill default scratch buffer
+(global-font-lock-mode t)
+(setq font-lock-maximum-decoration t)

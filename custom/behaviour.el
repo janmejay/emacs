@@ -170,3 +170,10 @@
 (define-key ruby-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 ;;(define-key c++-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 ;;(define-key lisp-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
+
+(global-set-key (kbd "C-M-z") 'emacs-project-find)
+(global-set-key (kbd "C-M-y") 'longlines-mode)
+(global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
+
+
+
