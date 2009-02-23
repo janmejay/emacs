@@ -55,6 +55,9 @@
 ;;(require 'rinari-movement)
 ;;(load "collection/ruby/rinari")
 (define-key ruby-mode-map (kbd "<return>") 'ruby-reindent-then-newline-and-indent)
+(define-key ruby-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
+(define-key ruby-mode-map (kbd "S-<f8>") 'run-ruby-file)
+(define-key ruby-mode-map (kbd "<f8>") 'run-ruby-file-last-run)
 
 ;;renari html support tweak
 (define-key rinari-minor-mode-map
@@ -167,13 +170,9 @@
       (let ((mark-even-if-inactive t))
         (indent-region (region-beginning) (region-end) nil))))
 (global-set-key (kbd "C-j") 'dumb-indent-without-reindent-of-current-line)
-(define-key ruby-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 ;;(define-key c++-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 ;;(define-key lisp-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 
 (global-set-key (kbd "C-M-z") 'emacs-project-find)
 (global-set-key (kbd "C-M-y") 'longlines-mode)
 (global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
-
-
-

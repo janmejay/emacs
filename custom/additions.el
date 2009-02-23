@@ -88,3 +88,13 @@
   (let* ((indent-lvl (current-indentation)))
     (newline-and-indent)
     (indent-to indent-lvl)))
+
+(defun run-ruby-file ()
+  (interactive)
+  (let ((buffer (current-buffer)))
+    (setq last-run-ruby-file (buffer-file-name buffer))
+    (start-process "run-ruby-file" "*run-ruby-file*" "ruby" (buffer-file-name buffer))))
+
+(defun run-ruby-file-last-run ()
+  (interactive)
+  (start-process "run-ruby-file" "*run-ruby-file*" "ruby" last-run-ruby-file))
