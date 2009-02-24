@@ -16,6 +16,17 @@
       (dolist (element projs value)
         (setq value (cons (car (split-string element "/.emacs_project")) value))))))
 
+(defun enable-ecb-and-switch-to-dir-window ()
+  (ecb-activate)
+  (ecb-goto-window-directories))
+
+(setq ecb-is-enabled nil)
+(defun toggle-ecb-activation ()
+  (interactive)
+  (if ecb-is-enabled (ecb-deactivate)
+    (enable-ecb-and-switch-to-dir-window))
+  (setq ecb-is-enabled (not ecb-is-enabled)))
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,7 +52,6 @@
 (ecb-layout-switch "left3")
 (ecb-activate)
 
-(global-set-key (kbd "<f5>") 'ecb-goto-window-directories)
 ;;(global-set-key (kbd "<f6>") 'ecb-goto-window-sources)
 ;;(global-set-key (kbd "<f7>") 'ecb-goto-window-methods)
 

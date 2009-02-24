@@ -176,3 +176,4 @@
 (global-set-key (kbd "C-M-z") 'emacs-project-find)
 (global-set-key (kbd "C-M-y") 'longlines-mode)
 (global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
+(global-set-key (kbd "<f5>") 'toggle-ecb-activation)
