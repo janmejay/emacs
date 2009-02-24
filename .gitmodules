@@ -34,3 +34,6 @@
 [submodule "vendor/jump"]
 	path = vendor/jump
 	url = git://github.com/eschulte/jump.el.git
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/janmejay/rinari.git
