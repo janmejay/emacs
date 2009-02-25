@@ -13,9 +13,7 @@
 (global-set-key "\C-R" 'replace-string)
 
 ; vim emulation
-(global-set-key [C-tab] 'other-window) 
-(global-set-key [M-up] 'defunkt-inc-num-at-point)
-(global-set-key [M-down] 'defunkt-dec-num-at-point)
+(global-set-key [C-tab] 'other-window)
 (global-set-key (kbd "C-*") 'isearch-forward-at-point)
 (global-set-key [remap kill-word] 'defunkt-kill-word)
 (global-set-key [remap backward-kill-word] 'defunkt-backward-kill-word)
