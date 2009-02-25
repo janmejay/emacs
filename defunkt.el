@@ -26,4 +26,5 @@
 (vendor 'twittering-mode)
 (vendor 'textile-mode)
 (vendor 'textmate)
+(vendor 'yasnippet)
 (textmate-mode)
