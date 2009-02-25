@@ -26,5 +26,8 @@
 (vendor 'twittering-mode)
 (vendor 'textile-mode)
 (vendor 'textmate)
-(vendor 'yasnippet)
 (textmate-mode)
+
+(vendor 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
