@@ -177,3 +177,10 @@
 (global-set-key (kbd "C-M-y") 'longlines-mode)
 (global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
 (global-set-key (kbd "<f5>") 'toggle-ecb-activation)
+
+;;pick up the corresponding tags file by recursively looking up parent dirs and add it to tags-table-list
+(defadvice find-tag 
+  (before discover-before-lookup)
+  (discover-corresponding-tags-file))
+
+(global-set-key (kbd "C-`") 'confirm-and-reset-tags-table)

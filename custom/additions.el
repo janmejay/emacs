@@ -98,3 +98,20 @@
 (defun run-ruby-file-last-run ()
   (interactive)
   (start-process "run-ruby-file" "*run-ruby-file*" "ruby" last-run-ruby-file))
+
+(defun discover-corresponding-tags-file ()
+  (labels
+      ((find-tags-file-r (path)
+                         (let* ((parent (file-name-directory path))
+                                (possible-tags-file (concat parent "TAGS")))
+                           (cond
+                            ((file-exists-p possible-tags-file) (add-to-list 'tags-table-list  possible-tags-file))
+                            ((string= "/TAGS" possible-tags-file) (error "no tags file found"))
+                            (t (find-tags-file-r (directory-file-name parent)))))))
+    
+    (if (buffer-file-name)
+        (find-tags-file-r (buffer-file-name)))))
+
+(defun confirm-and-reset-tags-table ()
+  (interactive)
+  (if (y-or-n-p "Reset tags table?") (tags-reset-tags-tables)))
