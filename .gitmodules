@@ -31,3 +31,6 @@
 [submodule "vendor/collection"]
 	path = vendor/collection
 	url = git://github.com/georgi/elisp.git
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/eschulte/rinari.git

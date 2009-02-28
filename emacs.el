@@ -4,8 +4,7 @@
                    "~/.emacs.d/vendor/goodies/test-runner"
                    "~/.emacs.d/vendor/collection"
                    "~/.emacs.d/vendor/collection/ruby"
-;;                   "~/.emacs.d/vendor/jump"
-;;                   "~/.emacs.d/vendor/rinari"
+                   "~/.emacs.d/vendor/rinari"
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/ecb"))
 
@@ -20,7 +19,6 @@
 (load "custom/behaviour")
 
 (require 'tabbar)
-;;(require 'jump)
 
 (load "defunkt")
 (cua-mode nil)
