@@ -115,3 +115,10 @@
 (defun confirm-and-reset-tags-table ()
   (interactive)
   (if (y-or-n-p "Reset tags table?") (tags-reset-tags-tables)))
+
+(defun newline-and-indent-in-haml ()
+  (interactive)
+  (let* ((indent-lvl (current-indentation)))
+    (newline)
+    (haml-indent-line)))
+

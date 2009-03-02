@@ -184,3 +184,8 @@
   (discover-corresponding-tags-file))
 
 (global-set-key (kbd "C-`") 'confirm-and-reset-tags-table)
+
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+
+(define-key haml-mode-map (kbd "<RET>") 'newline-and-indent-in-haml)

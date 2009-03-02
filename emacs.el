@@ -6,6 +6,7 @@
                    "~/.emacs.d/vendor/collection/ruby"
                    "~/.emacs.d/vendor/rinari"
                    "~/.emacs.d/vendor/yasnippet"
+                   "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"))
 
 (load "cedet/common/cedet")
@@ -13,6 +14,9 @@
 (semantic-load-enable-semantic-debugging-helpers)
 
 (require 'ecb)
+
+(require 'haml-mode)
+(require 'sass-mode)
 
 (load "custom/view")
 (load "custom/additions")
