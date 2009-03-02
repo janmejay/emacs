@@ -189,3 +189,4 @@
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
 (define-key haml-mode-map (kbd "<RET>") 'newline-and-indent-in-haml)
+(define-key haml-mode-map (kbd "C-;") 'indent-haml-region)

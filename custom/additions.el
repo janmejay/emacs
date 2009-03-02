@@ -122,3 +122,6 @@
     (newline)
     (haml-indent-line)))
 
+(defun indent-haml-region ()
+  (interactive)
+  (haml-indent-region (region-beginning) (region-end)))
