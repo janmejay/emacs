@@ -1,0 +1,5 @@
+#name : create_table :foo do |t| ... end
+# --
+create_table :$0 do |t|
+  t.timestamps
+end

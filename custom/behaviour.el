@@ -28,6 +28,7 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+(yas/load-directory "~/.emacs.d/custom/snippets")
 
 ;;;;;;;;; css-mode
 (load "goodies/css-mode")
