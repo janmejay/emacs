@@ -1,0 +1,5 @@
+#name : require of spec helper + desc(which can be further expended into describe)
+# --
+require File.expand_path(File.dirname(__FILE__) + '$1/../spec_helper')
+
+desc$2

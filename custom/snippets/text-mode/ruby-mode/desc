@@ -1,0 +1,10 @@
+#name : describe Foo do ... end
+# --
+describe $1 do
+  before do
+  end
+
+  it "should $2" do
+    $3
+  end
+end

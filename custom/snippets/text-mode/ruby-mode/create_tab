@@ -1,5 +1,6 @@
 #name : create_table :foo do |t| ... end
 # --
-create_table :$0 do |t|
+create_table :$1 do |t|
+  $2
   t.timestamps
 end
