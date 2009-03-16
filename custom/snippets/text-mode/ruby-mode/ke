@@ -1,0 +1,4 @@
+#name : Kernel.eval ... end
+# --
+
+Kernel.eval "$1", binding, __FILE__, __LINE__
