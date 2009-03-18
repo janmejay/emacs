@@ -33,11 +33,6 @@
 ;;;;;;;;; css-mode
 (load "goodies/css-mode")
 
-;;;;; running tests
-(require 'test-runner)
-
-(global-set-key [(f7)] 'run-test)
-
 ;; enable test-case-mode automatically
 (add-hook 'find-file-hook 'enable-test-case-mode-if-test)
 
@@ -77,6 +72,12 @@
   "\C-c\C-b" 'rinari-find-by-context)
 ;;(define-key rinari-minor-mode-map
 ;;  "\C-x\C-\M-F" 'find-file-in-project)
+
+;;;;; running tests
+(require 'test-runner)
+
+(global-set-key [(f7)] 'run-test)
+(define-key ruby-mode-map (kbd "S-<f7>") 'toggle-run-current-rspec-block)
 
 ;;;;; settings
 
