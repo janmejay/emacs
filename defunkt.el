@@ -23,6 +23,7 @@
 (vendor 'growl)
 (vendor 'haml-mode)
 (vendor 'rhtml-mode)
+(vendor 'sass-mode)
 (vendor 'twittering-mode)
 (vendor 'textile-mode)
 (vendor 'textmate)
