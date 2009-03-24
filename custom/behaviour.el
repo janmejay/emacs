@@ -72,12 +72,13 @@
   "\C-c\C-b" 'rinari-find-by-context)
 ;;(define-key rinari-minor-mode-map
 ;;  "\C-x\C-\M-F" 'find-file-in-project)
-
+(define-key ruby-mode-map (kbd "C-{") 'ruby-encomment-region)
+(define-key ruby-mode-map (kbd "C-}") 'ruby-decomment-region)
 ;;;;; running tests
 (require 'test-runner)
 
 (global-set-key [(f7)] 'run-test)
-(define-key ruby-mode-map (kbd "S-<f7>") 'toggle-run-current-rspec-block)
+(define-key ruby-mode-map (kbd "S-<f7>") 'run-current-rspec-block)
 
 ;;;;; settings
 
