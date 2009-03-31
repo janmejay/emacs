@@ -7,11 +7,16 @@
                    "~/.emacs.d/vendor/rinari"
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
-                   "~/.emacs.d/vendor/ecb"))
+                   "~/.emacs.d/vendor/ecb"
+                   "~/.emacs.d/vendor/jde/lisp")) 
+
+;;elib is locally installed (debian has an elib package)
 
 (load "cedet/common/cedet")
 (semantic-load-enable-excessive-code-helpers)
 (semantic-load-enable-semantic-debugging-helpers)
+
+(require 'jde)
 
 (require 'ecb)
 
