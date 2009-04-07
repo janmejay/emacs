@@ -28,3 +28,9 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = git://github.com/bkerley/yasnippet.git
+[submodule "vendor/cedet"]
+	path = vendor/cedet
+	url = git://github.com/vjr/cedet.git
+[submodule "vendor/ecb"]
+	path = vendor/ecb
+	url = git://github.com/pat-maddox/ecb.git
