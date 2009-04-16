@@ -26,8 +26,11 @@
 (vendor 'sass-mode)
 (vendor 'twittering-mode)
 (vendor 'textile-mode)
+
 (vendor 'textmate)
 (textmate-mode)
+
+(vendor 'yaml-mode)
 
 (vendor 'yasnippet)
 (yas/initialize)
