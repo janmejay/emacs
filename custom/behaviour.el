@@ -195,3 +195,5 @@
 (define-key haml-mode-map (kbd "C-;") 'indent-haml-region)
 
 (setq js2-mode-must-byte-compile nil) 
+
+(setq x-select-enable-clipboard t)
