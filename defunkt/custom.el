@@ -9,6 +9,10 @@
  '(cua-keep-region-after-copy t)
  '(cua-mode t nil (cua-base))
  '(default-frame-alist (quote ((tool-bar-lines . 0) (foreground-color . "white") (background-color . "black") (menu-bar-lines . 1) (font . "-apple-inconsolata-medium-r-normal--20-160-72-72-m-160-iso10646-1"))))
+ '(ecb-layout-window-sizes (quote (("left3"))))
+ '(ecb-options-version "2.33beta2")
+ '(ecb-source-path (cons "~/emacs_extensions" (find-all-emacs-projects)))
+ '(ecb-tip-of-the-day nil)
  '(erc-modules (quote (autojoin button completion fill irccontrols match menu netsplit noncommands readonly ring scrolltobottom stamp track)))
  '(javascript-shell-command "johnson")
  '(js2-auto-indent-flag nil)
@@ -27,6 +31,12 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "monaco"))))
+ '(ecb-analyse-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
+ '(ecb-default-highlight-face ((((class color) (background dark)) (:background "#223322"))))
+ '(ecb-directory-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
+ '(ecb-history-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
+ '(ecb-method-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
+ '(ecb-source-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
  '(emacs-lisp-mode-default ((t (:inherit autoface-default :slant normal :weight normal))) t)
  '(minibuffer-prompt ((((background dark)) (:foreground "cyan"))))
  '(mode-line ((t (:inherit aquamacs-variable-width :background "grey25" :foreground "grey75" :width normal))))
