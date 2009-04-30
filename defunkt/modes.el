@@ -11,6 +11,9 @@
 ; obj-c
 (setq auto-mode-alist (cons '("\\.m" . objc-mode) auto-mode-alist))
 
+; yaml
+(setq auto-mode-alist (cons '("\\.ya?ml" . yaml-mode) auto-mode-alist))
+
 ; magit
 (eval-after-load 'magit
   '(progn
