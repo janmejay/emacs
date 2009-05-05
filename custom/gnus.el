@@ -27,3 +27,27 @@
     (message "Converting Atom to RSS... done")))
 
 (ad-activate 'mm-url-insert)
+
+(require 'cl)
+(require 'gnus)
+(require 'nnrss)
+(require 'browse-url)
+
+(defun browse-nnrss-url (arg)
+  (interactive "p")
+  (let ((url (assq nnrss-url-field
+                   (mail-header-extra
+                    (gnus-data-header
+                     (assq (gnus-summary-article-number)
+                           gnus-newsgroup-data))))))
+    (if url
+        (browse-url (cdr url))
+      (gnus-summary-scroll-up arg))))
+
+(add-hook 'gnus-summary-mode-hook
+          (lambda ()
+            (define-key gnus-summary-mode-map
+              (kbd "C-<return>")
+              'browse-nnrss-url)))
+
+(add-to-list 'nnmail-extra-headers nnrss-url-field)
