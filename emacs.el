@@ -7,6 +7,7 @@
 
 (add-to-list 'load-path
              "~/.emacs.d/vendor/ecb")
+(load "custom/view")
+
 (require 'ecb)
 
-(load "custom/view")

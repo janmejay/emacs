@@ -32,11 +32,8 @@
   ;; If there is more than one, they won't work right.
 )
 
-(ecb-layout-switch "left3")
-(ecb-activate)
 
 (global-set-key (kbd "<f5>") 'ecb-goto-window-directories)
 ;;(global-set-key (kbd "<f6>") 'ecb-goto-window-sources)
 ;;(global-set-key (kbd "<f7>") 'ecb-goto-window-methods)
 
-(set-frame-size-according-to-resolution)
