@@ -26,3 +26,5 @@
 
 (load "defunkt")
 (cua-mode nil)
+(put 'set-goal-column 'disabled nil)
+
