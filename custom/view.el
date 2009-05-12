@@ -16,22 +16,6 @@
       (dolist (element projs value)
         (setq value (cons (car (split-string element "/.emacs_project")) value))))))
 
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-layout-window-sizes (quote (("left3" (0.1921182266009852 . 0.35294117647058826) (0.1921182266009852 . 0.3137254901960784) (0.1921182266009852 . 0.3137254901960784)))))
- '(ecb-options-version "2.33beta2")
- '(ecb-source-path (cons "~/emacs_extensions" (find-all-emacs-projects)))
- '(ecb-tip-of-the-day nil))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-)
-
 
 (global-set-key (kbd "<f5>") 'ecb-goto-window-directories)
 ;;(global-set-key (kbd "<f6>") 'ecb-goto-window-sources)
