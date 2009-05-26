@@ -31,6 +31,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "monaco"))))
+ '(autoface-default ((t (:inherit default :family "apple-inconsolata"))))
  '(ecb-analyse-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
  '(ecb-default-highlight-face ((((class color) (background dark)) (:background "#223322"))))
  '(ecb-directory-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face))))
