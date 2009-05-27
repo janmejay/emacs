@@ -197,3 +197,5 @@
 (setq js2-mode-must-byte-compile nil) 
 
 (setq x-select-enable-clipboard t)
+
+(global-set-key (kbd "C-M-t") 'transpose-lines)
