@@ -16,7 +16,7 @@
 (semantic-load-enable-excessive-code-helpers)
 (semantic-load-enable-semantic-debugging-helpers)
 
-;;(require 'jde)
+(require 'jde)
 
 (require 'ecb)
 
@@ -26,6 +26,7 @@
 (load "custom/view")
 (load "custom/additions")
 (load "custom/behaviour")
+(load "custom/irc-startup")
 
 (require 'tabbar)
 

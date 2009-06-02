@@ -21,3 +21,5 @@
 
 
 (load-file "~/.emacs.d/custom/gnus.el")
+
+(define-key message-mode-map (kbd "C-j") 'mml-attach-file)
