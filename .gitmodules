@@ -37,3 +37,6 @@
 [submodule "vendor/egg"]
 	path = vendor/egg
 	url = git://github.com/bogolisk/egg.git
+[submodule "vendor/cucumber-mode"]
+	path = vendor/cucumber-mode
+	url = git@github.com:bkerley/cucumber.el.git
