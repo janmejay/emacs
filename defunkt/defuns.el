@@ -143,7 +143,7 @@
   "Toggle selective-display."
   (interactive)
   (if (eq selective-display nil)
-      (set-selective-display 4)
+      (set-selective-display 2)
     (set-selective-display nil)))
 
 (defun bryce-increase-selective-display ()
