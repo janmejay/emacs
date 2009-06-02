@@ -31,3 +31,6 @@
 
 (add-hook 'css-mode-hook '(lambda ()
                             (define-key css-mode-map [tab] 'defunkt-indent)))
+
+(global-set-key (kbd "A-i") 'bryce-toggle-selective-display)
+(global-set-key (kbd "A-u") 'bryce-increase-selective-display)
