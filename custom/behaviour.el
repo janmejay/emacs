@@ -144,10 +144,9 @@
 
 ;;;;;aliases
 
-(defalias 'sh 'shell)
+(defalias 'sh 'ansi-term)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
-(defalias 'sh 'shell)
 
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'lml 'list-matching-lines)

@@ -28,3 +28,27 @@
 ;; Connect to servers.
 ;(rcirc); freenode is the default
 ;(rcirc-connect "localhost"); if you run bitlbee, this will connect to it
+
+(defun bring-forth-all-irc-windows ()
+  (interactive)
+  (delete-other-windows)
+  (being-forth-all-irc-channels rcirc-server-alist))
+
+(defun being-forth-all-irc-channels (server-alist)
+  (let ((server-alist-elem (car server-alist)) (balance-server-alist (cdr server-alist)))
+    (being-forth-irc-channels-for-server (car server-alist-elem) (caddr server-alist-elem))
+    (if (> (length balance-server-alist) 0)
+        (being-forth-all-irc-channels balance-server-alist))))
+
+(defun being-forth-irc-channels-for-server (server channels)
+  (let ((splitable (selected-window)) (irc-window-width 67))
+    (setq splitable (split-window (selected-window) (- (window-width) irc-window-width) t))
+    (create-window-for-channel-list channels server splitable)))
+
+(defun create-window-for-channel-list (channel-list server splittable)
+  (let ((height (/ (window-height splittable) (length channel-list)))
+        (other-channels-list (cdr channel-list)))
+    (set-window-buffer splittable (concat (car channel-list) "@" server))
+    (setq splittable (split-window splittable height))
+    (if (> (length other-channels-list) 0)
+        (create-window-for-channel-list (cdr channel-list) server splittable))))
