@@ -12,7 +12,7 @@
 (add-hook 'rcirc-mode-hook (lambda ()
                              (flyspell-mode 1)))
 
-(setq rcirc-time-format "%Y-%m-%d %H:%M ")
+(setq rcirc-time-format "%H:%M ")
 
 ;; Change user info
 (setq rcirc-default-nick "janmejay")
