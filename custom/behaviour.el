@@ -198,3 +198,6 @@
 (setq x-select-enable-clipboard t)
 
 (global-set-key (kbd "C-M-t") 'transpose-lines)
+
+(setq max-lisp-eval-depth 5000)
+(setq max-specpdl-size 6000)
