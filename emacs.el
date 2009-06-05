@@ -8,8 +8,7 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"
-                   "~/.emacs.d/vendor/jde/lisp"
-                   "~/.emacs.d/custom/wrappers"))
+                   "~/.emacs.d/vendor/jde/lisp")) 
 
 ;;elib is locally installed (debian has an elib package)
 
