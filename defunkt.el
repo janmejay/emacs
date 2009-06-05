@@ -1,5 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/vendor")
-
 ;; custom place to save customizations
 ;;(setq custom-file "~/.emacs.d/defunkt/custom.el")
 ;;(load custom-file)
@@ -14,14 +12,14 @@
 ;;(load "defunkt/theme")
 (load "defunkt/temp_files")
 (load "defunkt/github")
-(load "defunkt/git")
+;;(load "defunkt/git")
 
 (vendor 'ack)
 (vendor 'cheat)
 (vendor 'magit)
 (vendor 'gist)
 ;;(vendor 'growl)
-(vendor 'twittering-mode)
+;;(vendor 'twittering-mode)
 (vendor 'textile-mode)
 (vendor 'textmate)
 (vendor 'haml-mode)

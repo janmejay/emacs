@@ -14,8 +14,8 @@
 ;;elib is locally installed (debian has an elib package)
 
 (load "cedet/common/cedet")
-(semantic-load-enable-excessive-code-helpers)
-(semantic-load-enable-semantic-debugging-helpers)
+;;(semantic-load-enable-excessive-code-helpers)
+;;(semantic-load-enable-semantic-debugging-helpers)
 
 (require 'jde)
 
