@@ -18,6 +18,7 @@
 
 (vendor 'ack)
 (vendor 'cheat)
+(vendor 'feature-mode)
 (vendor 'magit)
 (vendor 'gist)
 (vendor 'growl)

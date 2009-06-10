@@ -66,6 +66,7 @@
 (setq erc-track-exclude-types '("JOIN" "PART" "QUIT" "NICK" "MODE"))
 (setq erc-autojoin-channels-alist '(("freenode.net" "#github" "#fauna")))
 
-;; cucumber / features
-(autoload 'feature-mode "feature-mode" "Mode for editing cucumber files" t)
-(add-to-list 'feature-mode '("\.feature$" . feature-mode))
+;; cucumber / feature
+(add-to-list 'load-path "~/.emacs.d/vendor/feature-mode")
+(autoload 'feature-mode "feature-mode.el" "Mode for editing cucumber files" t)
+(setq auto-mode-alist (cons '("\\.feature" . feature-mode) auto-mode-alist))
