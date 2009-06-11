@@ -22,7 +22,8 @@
 
 (setq rcirc-server-alist 
       '(("irc.freenode.net" :channels
-         ("#emacs" "#debian" "#rubyonrails" "#ruby" "#gosu" "#jruby")))) 
+         ("#emacs" "#debian" "#rubyonrails" "#ruby" "#gosu"))
+        ("localhost"))) 
 
 
 ;; Connect to servers.
