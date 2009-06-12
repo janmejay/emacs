@@ -19,6 +19,7 @@
 (vendor 'ack)
 (vendor 'cheat)
 (vendor 'feature-mode)
+(vendor 'htmlize)
 (vendor 'magit)
 (vendor 'gist)
 (vendor 'growl)
