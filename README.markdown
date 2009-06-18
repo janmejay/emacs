@@ -6,9 +6,10 @@
     $ git clone git://github.com/janmejay/emacs.git
     $ ln -s emacs .emacs.d
     $ emacs --debug-init #this will show you the stack trace if something is wrong (i guess ~/.emacs.d/defunkt/erlang.el may pop errors, because of path issues, change those paths to your system's erlang installation path)
+    $ emacs -q # to byte compile js2(javascript mode). JS2 is slow for big files when not compiled. Use "M-x byte-compile-file RET ~/.emacs.d/vendor/js2.el RET". This should generate js2.elc(which is the byte compliation output)(warnings can safely be ignored).
     $ # doing emacs --debug-init again should start without any errors
     $ emacs #and enjoy the setup
-  please change the locations according to your taste.
+  change the directory locations to fit your taste.
 
 -> How do i find out what went wrong when i tried to do THAT? : M-x 'toggle-debug-on-error' and it will show you what went wrong.
 
