@@ -74,6 +74,9 @@
 ;;  "\C-x\C-\M-F" 'find-file-in-project)
 (define-key ruby-mode-map (kbd "C-{") 'ruby-encomment-region)
 (define-key ruby-mode-map (kbd "C-}") 'ruby-decomment-region)
+
+(load "ruby/rubydb3x")
+
 ;;;;; running tests
 (require 'test-runner)
 
