@@ -138,3 +138,15 @@
         (setq isearch-initial-string (buffer-substring begin end))
         (add-hook 'isearch-mode-hook 'isearch-set-initial-string)
         (isearch-forward regexp-p no-recursive-edit)))))
+
+(defun bryce-toggle-selective-display ()
+  "Toggle selective-display."
+  (interactive)
+  (if (eq selective-display nil)
+      (set-selective-display 2)
+    (set-selective-display nil)))
+
+(defun bryce-increase-selective-display ()
+  "Scoot selective-display farther in."
+  (interactive )
+  (set-selective-display (+ 2 selective-display)))

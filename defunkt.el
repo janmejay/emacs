@@ -16,11 +16,21 @@
 
 (vendor 'ack)
 (vendor 'cheat)
+(vendor 'feature-mode)
+(vendor 'htmlize)
 (vendor 'magit)
 (vendor 'gist)
-;;(vendor 'growl)
-;;(vendor 'twittering-mode)
-(vendor 'textile-mode)
-(vendor 'textmate)
 (vendor 'haml-mode)
+(vendor 'rhtml-mode)
+(vendor 'sass-mode)
+(vendor 'textile-mode)
+
+(vendor 'textmate)
 (textmate-mode)
+
+(vendor 'yaml-mode)
+
+(vendor 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+

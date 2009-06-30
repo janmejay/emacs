@@ -11,6 +11,9 @@
 ; obj-c
 (setq auto-mode-alist (cons '("\\.m" . objc-mode) auto-mode-alist))
 
+; yaml
+(setq auto-mode-alist (cons '("\\.ya?ml" . yaml-mode) auto-mode-alist))
+
 ; magit
 (eval-after-load 'magit
   '(progn
@@ -63,3 +66,7 @@
 (setq erc-track-exclude-types '("JOIN" "PART" "QUIT" "NICK" "MODE"))
 (setq erc-autojoin-channels-alist '(("freenode.net" "#github" "#fauna")))
 
+;; cucumber / feature ;;bkerley's submodule for cucumber/feature-mode is broken + don't need cucumber stuff
+;;(add-to-list 'load-path "~/.emacs.d/vendor/feature-mode")
+;;(autoload 'feature-mode "feature-mode.el" "Mode for editing cucumber files" t)
+;;(setq auto-mode-alist (cons '("\\.feature" . feature-mode) auto-mode-alist))
