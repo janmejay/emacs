@@ -18,7 +18,7 @@
 	url = git://github.com/defunkt/textmate.el
 [submodule "vendor/cedet"]
 	path = vendor/cedet
-	url = git://github.com/vjr/cedet.git
+	url = git://github.com/emacs-pkg-mirrors/cedet.git
 [submodule "vendor/ecb"]
 	path = vendor/ecb
 	url = git://github.com/pat-maddox/ecb.git
