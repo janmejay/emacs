@@ -22,7 +22,7 @@
             (global-set-key "\M-x" 'ido-execute-command)))
 
 (ido-mode t)
-(setq ido-enable-flex-matching t)
+(setq ido-enable-flex-matching nil)
 
 ;;;;;;;;; yasnippet
 (require 'yasnippet)
@@ -201,3 +201,10 @@
 (setq x-select-enable-clipboard t)
 
 (global-set-key (kbd "C-M-t") 'transpose-lines)
+
+(global-set-key (kbd "C-{") 'comment-region)
+(global-set-key (kbd "C-}") 'uncomment-region)
+
+(add-hook 'js2-mode-hook 
+          (lambda () 
+            (define-key js2-mode-map (kbd "C-c C-c") 'camelize)))

@@ -66,10 +66,6 @@
        (cond ((file-exists-p test-dir) test-dir)
              ((file-exists-p spec-dir) spec-dir))))
 
-(custom-set-variables
-  '(semanticdb-default-file-name ".semantic.cache")
-  '(semanticdb-default-save-directory "~/.emacs.d/.semantic"))
-
 (defun discover-emacs-project-file-path (traversed-path path-frags)
   (let ((path (concat traversed-path "/" (pop path-frags))))
     (let ((project-file-path (concat path "/.emacs_project")))
@@ -125,3 +121,41 @@
 (defun indent-haml-region ()
   (interactive)
   (haml-indent-region (region-beginning) (region-end)))
+
+
+(defun un-camelcase-word (s &optional sep start)
+  "Convert CamelCase string S to lower case with word separator SEP.
+    Default for SEP is a hyphen \"-\".
+
+    If third argument START is non-nil, convert words after that
+    index in STRING."
+  (let ((case-fold-search nil))
+    (while (string-match "[A-Z]" s (or start 1))
+      (setq s (replace-match (concat (or sep "_") 
+                                     (downcase (match-string 0 s))) 
+                             t nil s)))
+    (downcase s)))
+
+(defun mapcar-head (fn-head fn-rest list)
+  "Like MAPCAR, but applies a different function to the first element."
+  (if list
+      (cons (funcall fn-head (car list)) (mapcar fn-rest (cdr list)))))
+
+(defun camel-case-word (s)
+  "Convert under_score string S to CamelCase string."
+  (mapconcat 'identity (mapcar
+                        '(lambda (word) (capitalize (downcase word)))
+                        (split-string s "_")) ""))
+
+(defun camelize-method (s)
+  "Convert under_score string S to camelCase string."
+  (mapconcat 'identity (mapcar-head
+                        '(lambda (word) (downcase word))
+                        '(lambda (word) (capitalize (downcase word)))
+                        (split-string s "_")) ""))
+
+(defun camelize ()
+  "Camelize the word under @ point"
+  (interactive)
+  (let ((pt (bounds-of-thing-at-point 'symbol)))
+    (insert (camelize-method (delete-and-extract-region (car pt) (cdr pt))))))
