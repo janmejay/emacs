@@ -50,12 +50,12 @@
  '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 60 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
 
 (ecb-layout-switch "left3")
-(ecb-activate)
+;;(ecb-activate)
 
 ;;(global-set-key (kbd "<f6>") 'ecb-goto-window-sources)
 ;;(global-set-key (kbd "<f7>") 'ecb-goto-window-methods)
 
-(set-frame-size-according-to-resolution)
+;;(set-frame-size-according-to-resolution)
 
 (require 'window-numbering)
 (window-numbering-mode 1)
