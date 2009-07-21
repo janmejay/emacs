@@ -152,10 +152,12 @@
   (mapconcat 'identity (mapcar-head
                         '(lambda (word) (downcase word))
                         '(lambda (word) (capitalize (downcase word)))
-                        (split-string s "_")) ""))
+                        (split-string-and-unquote s "_")) ""))
 
-(defun camelize ()
-  "Camelize the word under @ point"
+(defun js-camelize ()
+  "Camelize the word under the point"
   (interactive)
   (let ((pt (bounds-of-thing-at-point 'symbol)))
-    (insert (camelize-method (delete-and-extract-region (car pt) (cdr pt))))))
+    (set-window-point (selected-window) (car pt))
+    (let ((matched-symbol (delete-and-extract-region (re-search-forward "_*") (cdr pt))))
+      (insert (camelize-method matched-symbol)))))
