@@ -67,16 +67,18 @@
              ((file-exists-p spec-dir) spec-dir))))
 
 (defun discover-emacs-project-file-path (traversed-path path-frags)
-  (let ((path (concat traversed-path "/" (pop path-frags))))
-    (let ((project-file-path (concat path "/.emacs_project")))
-      (if (file-exists-p project-file-path) project-file-path
-        (discover-emacs-project-file-path path path-frags)))))
+  (unless (eq 1 (length path-frags))
+    (let ((path (concat traversed-path "/" (pop path-frags))))
+      (let ((project-file-path (concat path "/.emacs_project")))
+        (if (file-exists-p project-file-path) project-file-path
+          (discover-emacs-project-file-path path path-frags))))))
 
 (defun find-emacs-project-file-for (file-path)
-  (discover-emacs-project-file-path "/" (split-string file-path "/")))
+  (discover-emacs-project-file-path "/" (split-string file-path "/" t)))
 
 (defun load-emacs-project-file-for (file-path)
-  (load-file (find-emacs-project-file-for file-path)))
+  (let ((prj-file (find-emacs-project-file-for file-path)))
+    (if prj-file (load-file prj-file))))
 
 
 (defun dumb-indent-without-reindent-of-current-line ()
