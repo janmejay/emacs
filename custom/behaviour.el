@@ -188,6 +188,8 @@
   (before discover-before-lookup)
   (discover-corresponding-tags-file))
 
+(ad-activate 'find-tag)
+
 (global-set-key (kbd "C-`") 'confirm-and-reset-tags-table)
 
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
