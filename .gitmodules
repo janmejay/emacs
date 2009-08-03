@@ -16,6 +16,12 @@
 [submodule "vendor/textmate.el"]
 	path = vendor/textmate.el
 	url = git://github.com/defunkt/textmate.el
+[submodule "vendor/sunburst"]
+	path = vendor/sunburst
+	url = git://gist.github.com/61465.git
+[submodule "vendor/rhtml-mode"]
+	path = vendor/rhtml-mode
+	url = git://github.com/eschulte/rhtml.git
 [submodule "vendor/ecb"]
 	path = vendor/ecb
 	url = git://github.com/pat-maddox/ecb.git
@@ -31,3 +37,7 @@
 [submodule "vendor/haml"]
 	path = vendor/haml
 	url = git://github.com/mislav/haml.git
+[submodule "vendor/egg"]
+	path = vendor/egg
+	url = git://github.com/bogolisk/egg.git
+
