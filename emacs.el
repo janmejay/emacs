@@ -1,3 +1,5 @@
+(setq overrides)
+
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
                    "~/.emacs.d/vendor/goodies"

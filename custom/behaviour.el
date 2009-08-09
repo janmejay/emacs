@@ -174,11 +174,9 @@
   (if (member major-mode '(emacs-lisp-mode scheme-mode lisp-mode c-mode c++-mode objc-mode latex-mode plain-tex-mode ruby-mode))
       (let ((mark-even-if-inactive t))
         (indent-region (region-beginning) (region-end) nil))))
-(global-set-key (kbd "C-j") 'dumb-indent-without-reindent-of-current-line)
-;;(define-key c++-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
-;;(define-key lisp-mode-map "\C-j" 'dumb-indent-without-reindent-of-current-line)
 
-(global-set-key (kbd "C-M-z") 'emacs-project-find)
+(global-set-key (kbd "C-j") 'dumb-indent-without-reindent-of-current-line)
+
 (global-set-key (kbd "C-M-y") 'longlines-mode)
 (global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
 (global-set-key (kbd "<f5>") 'toggle-ecb-activation)
@@ -204,9 +202,15 @@
 
 (global-set-key (kbd "C-M-t") 'transpose-lines)
 
-(global-set-key (kbd "C-{") 'comment-region)
-(global-set-key (kbd "C-}") 'uncomment-region)
-
 (add-hook 'js2-mode-hook 
           (lambda () 
             (define-key js2-mode-map (kbd "C-c C-c") 'js-camelize)))
+
+(add-to-list 'overrides
+             (lambda ()
+               (cua-mode nil)
+               (put 'set-goal-column 'disabled nil)
+
+               (add-to-list 'auto-mode-alist '("\\.rhtml$" . nxml-mode))
+               (add-to-list 'auto-mode-alist '("\\.html.erb$" . nxml-mode))
+               (global-set-key (kbd "C-z") 'emacs-project-find)))
