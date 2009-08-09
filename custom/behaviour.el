@@ -206,6 +206,8 @@
           (lambda () 
             (define-key js2-mode-map (kbd "C-c C-c") 'js-camelize)))
 
+(global-set-key (kbd "<end>") 'bury-buffer)
+
 (add-to-list 'overrides
              (lambda ()
                (cua-mode nil)
