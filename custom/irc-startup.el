@@ -8,6 +8,9 @@
 (defun rcirc-handler-301 (process cmd sender args)
   "/away message handler.")
 
+(if (file-exists-p "~/.rcirc-authinfo.el.gpg")
+    (load-file "~/.rcirc-authinfo.el.gpg"))
+
 ;; Turn on spell checking.
 (add-hook 'rcirc-mode-hook (lambda ()
                              (flyspell-mode 1)))
