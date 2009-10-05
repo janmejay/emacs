@@ -216,3 +216,17 @@
                (add-to-list 'auto-mode-alist '("\\.rhtml$" . nxml-mode))
                (add-to-list 'auto-mode-alist '("\\.html.erb$" . nxml-mode))
                (global-set-key (kbd "C-z") 'emacs-project-find)))
+
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "/usr/bin/conkeror")
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link) 
+(define-key global-map "\C-ca" 'org-agenda)
+
+(defun google-region (beg end)
+  "Google the selected region."
+  (interactive "r")
+  (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
+
+(global-set-key (kbd "C-c C-q") 'google-region)
