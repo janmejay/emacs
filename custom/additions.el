@@ -163,3 +163,8 @@
     (set-window-point (selected-window) (car pt))
     (let ((matched-symbol (delete-and-extract-region (re-search-forward "_*") (cdr pt))))
       (insert (camelize-method matched-symbol)))))
+
+(defun fullscreen ()
+  (interactive)
+  (set-frame-parameter nil 'fullscreen
+                       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))

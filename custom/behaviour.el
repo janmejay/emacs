@@ -230,3 +230,5 @@
   (browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-substring beg end))))
 
 (global-set-key (kbd "C-c C-q") 'google-region)
+
+(global-set-key (kbd "<f11>") 'fullscreen)
