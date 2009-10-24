@@ -215,6 +215,8 @@
 
                (add-to-list 'auto-mode-alist '("\\.rhtml$" . nxml-mode))
                (add-to-list 'auto-mode-alist '("\\.html.erb$" . nxml-mode))
+               (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
+               (add-to-list 'auto-mode-alist '("rakefile" . ruby-mode))
                (global-set-key (kbd "C-z") 'emacs-project-find)))
 
 (setq browse-url-browser-function 'browse-url-generic

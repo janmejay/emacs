@@ -8,8 +8,11 @@
 (defun rcirc-handler-301 (process cmd sender args)
   "/away message handler.")
 
-(if (file-exists-p "~/.rcirc-authinfo.el.gpg")
-    (load-file "~/.rcirc-authinfo.el.gpg"))
+(defun launch-irc ()
+  (interactive)
+  (if (file-exists-p "~/.rcirc-authinfo.el.gpg")
+      (load-file "~/.rcirc-authinfo.el.gpg"))
+  (call-interactively 'irc))
 
 ;; Turn on spell checking.
 (add-hook 'rcirc-mode-hook (lambda ()

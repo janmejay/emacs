@@ -15,6 +15,7 @@
  '(jde-gen-k&r t)
  '(transient-mark-mode t)
  '(show-paren-mode t)
+ '(highlight-current-line-globally t)
  '(semanticdb-default-file-name ".semantic.cache")
  '(semanticdb-default-save-directory "~/.emacs.d/.semantic"))
 (custom-set-faces

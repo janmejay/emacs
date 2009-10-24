@@ -83,3 +83,6 @@
 ;; (kill-buffer "*scratch*") ;; Kill default scratch buffer
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)
+
+(require 'highlight-current-line)
+(highlight-current-line-set-bg-color "#E5F5B3")
