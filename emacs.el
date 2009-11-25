@@ -11,6 +11,7 @@
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"
                    "~/.emacs.d/vendor/jde/lisp")) 
+(nconc exec-path '("~/bin"))
 
 ;;elib is locally installed (debian has an elib package)
 

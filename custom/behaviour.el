@@ -1,27 +1,19 @@
 ;;;;;; ido
+(setq confirm-nonexistent-file-or-buffer nil)
 (require 'ido)
-
-(setq ido-execute-command-cache nil)
-(defun ido-execute-command ()
-  (interactive)
-  (call-interactively
-   (intern
-    (ido-completing-read
-     "M-x "
-     (progn
-       (unless ido-execute-command-cache
-         (mapatoms (lambda (s)
-                     (when (commandp s)
-                       (setq ido-execute-command-cache
-                             (cons (format "%S" s) ido-execute-command-cache))))))
-       ido-execute-command-cache)))))
-    
 (add-hook 'ido-setup-hook
           (lambda ()
             (setq ido-enable-flex-matching t)
             (global-set-key "\M-x" 'ido-execute-command)))
-
 (ido-mode t)
+(ido-everywhere t)
+(setq ido-enable-flex-matching t)
+(setq ido-create-new-buffer 'always)
+(setq ido-enable-tramp-completion t)
+(setq ido-enable-last-directory-history nil)
+(setq ido-confirm-unique-completion nil)
+(setq ido-show-dot-for-dired t)
+(setq ido-use-filename-at-point t)
 (setq ido-enable-flex-matching nil)
 
 ;;;;;;;;; yasnippet
@@ -234,3 +226,5 @@
 (global-set-key (kbd "C-c C-q") 'google-region)
 
 (global-set-key (kbd "<f11>") 'fullscreen)
+
+(call-interactively 'server-start)
