@@ -1,0 +1,3 @@
+#name : self.assertTrue(...)
+# --
+self.assertTrue($1)

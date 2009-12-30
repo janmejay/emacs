@@ -1,0 +1,14 @@
+#name : import unittest ...
+# --
+import unittest
+$2
+
+class $1Test(unittest.TestCase):
+  def setUp(self):
+    pass
+
+  def test_$3(self):
+    $4
+
+if __name__ == '__main__':
+   unittest.main()

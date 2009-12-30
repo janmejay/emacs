@@ -1,0 +1,8 @@
+#name : class ClassTest(unittest.TestCase):
+# --
+class $1Test(unittest.TestCase):
+  def setUp(self):
+    pass
+
+  def test_$2(self):
+    $3

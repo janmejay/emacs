@@ -1,0 +1,7 @@
+#name : mock_factory = mox.Mox()
+# --
+mock_factory = mox.Mox()
+$1
+mock_factory.ReplayAll()
+$2
+mock_factory.VerifyAll()

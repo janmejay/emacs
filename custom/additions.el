@@ -183,3 +183,8 @@
   (interactive)
   (set-frame-parameter nil 'fullscreen
                        (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
+
+(defun bars ()
+  (interactive)
+  (menu-bar-mode)
+  (tool-bar-mode))
