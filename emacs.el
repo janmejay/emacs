@@ -1,6 +1,8 @@
 (setq overrides)
 
 (nconc load-path '("~/.emacs.d"
+                   "~/.emacs.d/vendor/enigma"
+                   "~/.emacs.d/vendor/enigma/vendor"
                    "~/.emacs.d/vendor"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
@@ -10,7 +12,8 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"
-                   "~/.emacs.d/vendor/jde/lisp")) 
+                   "~/.emacs.d/vendor/jde/lisp"
+                   )) 
 (nconc exec-path '("~/bin"))
 
 ;;elib is locally installed (debian has an elib package)
@@ -18,6 +21,8 @@
 (load "cedet/common/cedet")
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
+
+(load-library "ryan-python")
 
 (require 'jde)
 

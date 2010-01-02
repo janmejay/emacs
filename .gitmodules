@@ -41,3 +41,6 @@
 	path = vendor/egg
 	url = git://github.com/bogolisk/egg.git
 
+[submodule "vendor/enigma"]
+	path = vendor/enigma
+	url = git://github.com/EnigmaCurry/emacs.git
