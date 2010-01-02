@@ -47,6 +47,9 @@
 (define-key ruby-mode-map (kbd "S-<f8>") 'run-ruby-file)
 (define-key ruby-mode-map (kbd "<f8>") 'run-ruby-file-last-run)
 
+;;python
+(require 'pair-mode)
+
 ;;renari html support tweak
 (define-key rinari-minor-mode-map
   "\C-c\M-s" 'rinari-console)
@@ -126,6 +129,9 @@
   (define-key lisp-mode-map "\C-i" 'lisp-indent-line)
   (define-key lisp-mode-map "\C-j" 'eval-print-last-sexp))
 
+(defun my-python-mode-hook ()
+  (pair-mode))
+
 ;; Add all of the hooks...
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 (add-hook 'c-mode-hook 'my-c-mode-hook)
@@ -133,6 +139,7 @@
 (add-hook 'emacs-lisp-mode-hook 'my-lisp-mode-hook)
 (add-hook 'lisp-mode-hook 'my-lisp-mode-hook)
 (add-hook 'perl-mode-hook 'my-perl-mode-hook)
+(add-hook 'python-mode-hook 'my-python-mode-hook)
 
 (global-set-key (kbd "M-d") 'kill-word)
 
