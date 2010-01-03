@@ -235,3 +235,5 @@
 (global-set-key (kbd "<f11>") 'fullscreen)
 
 (call-interactively 'server-start)
+
+(require 'browse-kill-ring)
