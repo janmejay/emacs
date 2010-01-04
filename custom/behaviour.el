@@ -131,7 +131,9 @@
 
 (defun my-python-mode-hook ()
   (pair-mode)
-  (define-key py-mode-map (kbd "C-M-/") 'rope-code-assist))
+  (let ((key-map 
+         (if (boundp 'py-mode-map) py-mode-map python-mode-map)))
+    (define-key key-map (kbd "C-M-/") 'rope-code-assist)))
 
 ;; ropemacs configuration
 (setq ropemacs-enable-shortcuts 'nil)
