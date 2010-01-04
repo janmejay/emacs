@@ -12,3 +12,4 @@ auto-save-list
 TAGS
 tramp
 vendor/enigma
+*.pyc
