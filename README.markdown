@@ -2,7 +2,21 @@
 
 -> How to use this thing? : Assuming you are on unix/mac.... these steps should work.... 
     $ cd
-    $ echo "(load-file \"~/.emacs.d/emacs.el\")" > .emacs
+    $ # install python and pymacs using your package manager (aptitude/emerge/yum/yast... whatever)
+    $ # if you installed emacs from source or your dist doesn't wire pymacs in site-lisp.el, 
+    $ # then you need to add pymacs initialization to your .emacs before loading emacs.el
+    $ # try doing M-x load-library RET pymacs RET in your emacs session to find out if pymacs has been wired in
+    $ # do the next line only if pymacs loading failed
+    $ cat > .emacs # and paste the following lines in the terminal emulator
+     (add-to-list 'load-path "/usr/share/emacs/site-lisp/pymacs") # i used path as used by my debian box, substitute it with your <site-python>/pymacs directory
+     (autoload 'pymacs-apply "pymacs")
+     (autoload 'pymacs-call "pymacs")
+     (autoload 'pymacs-eval "pymacs" nil t)
+     (autoload 'pymacs-exec "pymacs" nil t)
+     (autoload 'pymacs-load "pymacs" nil t)
+    $ # test if M-x load-library RET pymacs RET  (it should work now)
+    $ # continue if successfully loaded pymacs in the previous test (you can use this repository without rope/ropemacs too(in which case, pymacs will not be required), few minutes of hacking should be enough to take pymacs out, if not, mail me and i will send you a patch to launch it without pymacs/rope)
+    $ echo "(load-file \"~/.emacs.d/emacs.el\")" >> .emacs
     $ git clone git://github.com/janmejay/emacs.git
     $ ln -s emacs .emacs.d
     $ cd ~/.emacs.d
@@ -30,3 +44,5 @@
 -> How often should i pull? : May be once in a while, i will keep adding/removing/modifying things to make them work better for me, you may like those modifications, so pulling once in a while may be something you want to do...)
 
 -> Why have i not tried/added/enabled that cool addon called X? : Because i didn't know about it... please drop me a message on my github profile... :-)
+
+-> Why is pymacs required? : I use ropemacs which is a terrific tool that takes emacs' python support to the next level(read about it -> http://rope.sourceforge.net/). You don't need it if you don't plan on hacking python code in emacs. However, the repo doesn't work without pymacs, so if you need to have it working without installing pymacs, drop me a mail so i can give you a little patch to fix it locally.
