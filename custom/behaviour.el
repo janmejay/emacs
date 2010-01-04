@@ -130,7 +130,14 @@
   (define-key lisp-mode-map "\C-j" 'eval-print-last-sexp))
 
 (defun my-python-mode-hook ()
-  (pair-mode))
+  (pair-mode)
+  (define-key py-mode-map (kbd "C-M-/") 'rope-code-assist))
+
+;; ropemacs configuration
+(setq ropemacs-enable-shortcuts 'nil)
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-")
+
 
 ;; Add all of the hooks...
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)

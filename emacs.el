@@ -13,7 +13,12 @@
                    "~/.emacs.d/vendor/jde/lisp")) 
 (nconc exec-path '("~/bin"))
 
-;;elib is locally installed (debian has an elib package)
+;;making rope available in python load path assuming pymacs is installed
+;;if not, use your OS' package manager to get it.
+(setq pymacs-load-path '("~/.emacs.d/vendor/rope"
+                         "~/.emacs.d/vendor/ropemacs"))
+
+;;elib is locally installed (debian and gentoo have elib package)
 
 (load "cedet/common/cedet")
 ;;(semantic-load-enable-excessive-code-helpers)
