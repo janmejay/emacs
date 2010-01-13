@@ -15,7 +15,7 @@
 	url = git://github.com/defunkt/gist.el.git
 [submodule "vendor/textmate.el"]
 	path = vendor/textmate.el
-	url = git://github.com/defunkt/textmate.el
+	url = git://github.com/janmejay/textmate.el
 [submodule "vendor/sunburst"]
 	path = vendor/sunburst
 	url = git://gist.github.com/61465.git
