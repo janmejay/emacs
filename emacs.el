@@ -12,7 +12,8 @@
                    "~/.emacs.d/vendor/ecb"
                    "~/.emacs.d/vendor/jde/lisp"
                    "~/.emacs.d/vendor/slime"
-                   "~/.emacs.d/vendor/slime/contrib"))
+                   "~/.emacs.d/vendor/slime/contrib"
+                   "~/.emacs.d/vendor/clojure"))
 (nconc exec-path '("~/bin"))
 
 ;;making rope available in python load path assuming pymacs is installed

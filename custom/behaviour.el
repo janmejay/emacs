@@ -267,6 +267,7 @@
 (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 (add-hook 'inferior-lisp-mode-hook (lambda () (slime-mode t)))
 
+(require 'clojure-mode)
 
 (call-interactively 'server-start)
 

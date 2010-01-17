@@ -40,7 +40,9 @@
 [submodule "vendor/egg"]
 	path = vendor/egg
 	url = git://github.com/bogolisk/egg.git
-
 [submodule "vendor/slime"]
 	path = vendor/slime
 	url = git://github.com/nablaone/slime.git
+[submodule "vendor/clojure"]
+	path = vendor/clojure
+	url = git://github.com/technomancy/clojure-mode.git
