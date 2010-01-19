@@ -245,29 +245,6 @@
 
 (global-set-key (kbd "<f11>") 'fullscreen)
 
-(setq slime-lisp-implementations
-      `((sbcl ("sbcl"))
-;;        (sbcl ("sbcl"))
-        ))
-
-(eval-after-load "slime"
-  '(progn
-     (require 'slime-fancy)
-     (require 'slime-banner)
-     (require 'slime-asdf)
-     (slime-banner-init)
-     (slime-asdf-init)
-     (setq slime-complete-symbol*-fancy t)
-     (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
-     (slime-setup)))
-
-(require 'slime-autoloads)
-(require 'slime)
-
-(add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
-(add-hook 'inferior-lisp-mode-hook (lambda () (slime-mode t)))
-
-
 (call-interactively 'server-start)
 
 (require 'browse-kill-ring)
