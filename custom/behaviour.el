@@ -4,7 +4,8 @@
 (add-hook 'ido-setup-hook
           (lambda ()
             (setq ido-enable-flex-matching t)
-            (global-set-key "\M-x" 'ido-execute-command)))
+            (global-set-key "\M-x" 'ido-execute-command)
+            (global-set-key "\M-i" 'ido-mode)))
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-flex-matching t)
