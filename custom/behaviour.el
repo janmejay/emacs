@@ -85,7 +85,6 @@
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
 
-;; C++ and C mode...
 (defun my-c++-mode-hook ()
   (setq tab-width 4)
   (setq c-basic-offset 4)
@@ -113,18 +112,15 @@
   (setq c-argdecl-indent 0)
   (setq c-label-offset -4))
 
-;; Perl mode
 (defun my-perl-mode-hook ()
   (setq tab-width 4)
   (define-key c++-mode-map "\C-m" 'reindent-then-newline-and-indent)
   (setq perl-indent-level 4)
   (setq perl-continued-statement-offset 4))
 
-;; Scheme mode...
 (defun my-scheme-mode-hook ()
   (define-key scheme-mode-map "\C-m" 'reindent-then-newline-and-indent))
 
-;; Emacs-Lisp mode...
 (defun my-lisp-mode-hook ()
   (define-key lisp-mode-map "\C-m" 'reindent-then-newline-and-indent)
   (define-key lisp-mode-map "\C-i" 'lisp-indent-line)
@@ -135,6 +131,9 @@
   (let ((key-map 
          (if (boundp 'py-mode-map) py-mode-map python-mode-map)))
     (define-key key-map (kbd "C-M-/") 'rope-code-assist)))
+
+(defun my-ruby-mode-hook ()
+  (define-key ruby-mode-map (kbd "<tab>") 'yas/expand))
 
 ;; ropemacs configuration
 (setq ropemacs-enable-shortcuts 'nil)
@@ -150,6 +149,7 @@
 (add-hook 'lisp-mode-hook 'my-lisp-mode-hook)
 (add-hook 'perl-mode-hook 'my-perl-mode-hook)
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+(add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
 
 (global-set-key (kbd "M-d") 'kill-word)
 
