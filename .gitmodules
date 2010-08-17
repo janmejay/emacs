@@ -46,3 +46,6 @@
 [submodule "vendor/markdown-mode"]
 	path = vendor/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule "vendor/scratch-el"]
+	path = vendor/scratch-el
+	url = http://github.com/ieure/scratch-el.git
