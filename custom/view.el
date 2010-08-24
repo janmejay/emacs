@@ -29,7 +29,7 @@
 
 (load "~/.emacs.d/custom/var_customization.el")
 
-(ecb-layout-switch "left3")
+;;(ecb-layout-switch "left3")
 ;;(ecb-activate)
 
 ;;(global-set-key (kbd "<f6>") 'ecb-goto-window-sources)

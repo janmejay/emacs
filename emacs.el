@@ -23,13 +23,7 @@
 
 ;;elib must be installed locally (debian (elib) and gentoo (app-emacs/elib) have it available as a package)
 
-(load "cedet/common/cedet")
-;;(semantic-load-enable-excessive-code-helpers)
-;;(semantic-load-enable-semantic-debugging-helpers)
-
-(require 'jde)
-
-(require 'ecb)
+;;(require 'jde)
 
 (require 'haml-mode)
 (require 'sass-mode)

@@ -21,7 +21,7 @@
 	url = git://github.com/eschulte/rhtml.git
 [submodule "vendor/ecb"]
 	path = vendor/ecb
-	url = git://github.com/patmaddox/ecb.git
+	url = http://github.com/emacsmirror/ecb.git
 [submodule "vendor/goodies"]
 	path = vendor/goodies
 	url = git://github.com/janmejay/emacs_goodies.git
@@ -49,3 +49,6 @@
 [submodule "vendor/scratch-el"]
 	path = vendor/scratch-el
 	url = http://github.com/ieure/scratch-el.git
+[submodule "vendor/cedet"]
+	path = vendor/cedet
+	url = http://github.com/emacsmirror/cedet.git
