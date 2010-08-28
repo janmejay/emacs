@@ -27,3 +27,7 @@
 
 
 (setq junit-jar-location "~/projects/code_review/junit-4.3.1.jar")
+
+(defvar *textmate-project-roots*
+  '(".git" ".hg" ".emacs_project")
+  "The presence of any file/directory in this list indicates a project root.")
