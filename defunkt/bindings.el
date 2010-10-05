@@ -14,11 +14,11 @@
 (global-set-key "\M-[" 'indent-region)
 
 ; vim emulation
-(global-set-key [C-tab] 'other-window)
-(global-set-key (kbd "C-*") 'isearch-forward-at-point)
-(global-set-key [remap kill-word] 'defunkt-kill-word)
-(global-set-key [remap backward-kill-word] 'defunkt-backward-kill-word)
-(global-set-key [remap aquamacs-backward-kill-word] 'defunkt-backward-kill-word)
+;; (global-set-key [C-tab] 'other-window)
+;; (global-set-key (kbd "C-*") 'isearch-forward-at-point)
+;; (global-set-key [remap kill-word] 'defunkt-kill-word)
+;; (global-set-key [remap backward-kill-word] 'defunkt-backward-kill-word)
+;; (global-set-key [remap aquamacs-backward-kill-word] 'defunkt-backward-kill-word)
 
 ; no printing!
 (when (boundp 'osx-key-mode-map)

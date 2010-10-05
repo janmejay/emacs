@@ -14,7 +14,7 @@
 (setq ido-enable-last-directory-history nil)
 (setq ido-confirm-unique-completion nil)
 (setq ido-show-dot-for-dired t)
-(setq ido-use-filename-at-point t)
+(setq ido-use-filename-at-point nil)
 (setq ido-enable-flex-matching nil)
 
 ;;;;;;;;; yasnippet
@@ -124,7 +124,9 @@
 (defun my-lisp-mode-hook ()
   (define-key lisp-mode-map "\C-m" 'reindent-then-newline-and-indent)
   (define-key lisp-mode-map "\C-i" 'lisp-indent-line)
-  (define-key lisp-mode-map "\C-j" 'eval-print-last-sexp))
+  (define-key lisp-mode-map "\C-j" 'eval-print-last-sexp)
+  (define-key lisp-mode-map (kbd "<f9>") 'hyperspec-lookup)
+  (paredit-mode))
 
 (defun my-python-mode-hook ()
   (pair-mode)
@@ -147,6 +149,7 @@
 (add-hook 'scheme-mode-hook 'my-scheme-mode-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-lisp-mode-hook)
 (add-hook 'lisp-mode-hook 'my-lisp-mode-hook)
+(add-hook 'common-lisp-mode-hook 'my-lisp-mode-hook)
 (add-hook 'perl-mode-hook 'my-perl-mode-hook)
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hook)
@@ -201,6 +204,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
 
 (define-key haml-mode-map (kbd "<RET>") 'newline-and-indent-in-haml)
 (define-key haml-mode-map (kbd "C-;") 'indent-haml-region)
@@ -267,6 +271,12 @@
 
 (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 (add-hook 'inferior-lisp-mode-hook (lambda () (slime-mode t)))
+(setq lisp-indent-function 'common-lisp-indent-function
+      lisp-complete-symbol-function 'slime-fuzzy-complete-symbol
+      common-lisp-hyperspec-root "file:///home/janmejay/tmp/lisp_hyper_spec/")
+
+(global-set-key (kbd "<f8>") 'slime-selector)
+
 
 (require 'clojure-mode)
 
