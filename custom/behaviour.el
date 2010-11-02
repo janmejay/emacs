@@ -235,7 +235,7 @@
                (global-set-key (kbd "C-z") 'emacs-project-find)))
 
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "/usr/bin/conkeror")
+      browse-url-generic-program "/usr/bin/chromium")
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link) 
