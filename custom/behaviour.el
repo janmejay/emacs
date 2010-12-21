@@ -200,7 +200,7 @@
 
 (ad-activate 'find-tag)
 
-(global-set-key (kbd "C-`") 'confirm-and-reset-tags-table)
+(global-set-key (kbd "C-`") 'confirm-and-do-damage)
 
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))

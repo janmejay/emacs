@@ -125,9 +125,10 @@
     (if (buffer-file-name)
         (find-tags-file-r (buffer-file-name)))))
 
-(defun confirm-and-reset-tags-table ()
+(defun confirm-and-do-damage ()
   (interactive)
-  (if (y-or-n-p "Reset tags table?") (tags-reset-tags-tables)))
+  (if (y-or-n-p "Reset tags table?") (tags-reset-tags-tables))
+  (if (y-or-n-p "Clear textmate cache?") (textmate-clear-cache)))
 
 (defun newline-and-indent-in-haml ()
   (interactive)
