@@ -230,6 +230,7 @@
                (add-to-list 'auto-mode-alist '("\\.html.erb$" . nxml-mode))
                (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
                (add-to-list 'auto-mode-alist '("rakefile" . ruby-mode))
+               (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
                (define-key *textmate-mode-map* (kbd "C-S-n") 'textmate-move-line-down)
                (define-key *textmate-mode-map* (kbd "C-S-p") 'textmate-move-line-up)
                (global-set-key (kbd "C-z") 'emacs-project-find)))
