@@ -31,6 +31,7 @@
 (load "custom/view")
 (load "custom/additions")
 (load "custom/behaviour")
+(load "custom/daddy")
 (load "custom/irc-startup")
 (load "~/.emacs.d/vendor/scratch-el/scratch.el")
 
