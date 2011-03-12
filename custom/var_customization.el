@@ -17,7 +17,8 @@
  '(show-paren-mode t)
  '(highlight-current-line-globally t)
  '(semanticdb-default-file-name ".semantic.cache")
- '(semanticdb-default-save-directory "~/.emacs.d/.semantic"))
+ '(semanticdb-default-save-directory "~/.emacs.d/.semantic")
+ '(gdb-many-windows t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
