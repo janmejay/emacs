@@ -10,11 +10,13 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"
-                   "~/.emacs.d/vendor/jde/lisp"
+                   ;;"~/.emacs.d/vendor/jde/lisp"
                    "~/.emacs.d/vendor/slime"
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"))
 (nconc exec-path '("~/bin"))
+
+(require 'ecb)
 
 ;;making rope available in python load path assuming pymacs is installed
 ;;if not, use your OS' package manager to get it. (on gentoo i use app-emacs/pymacs)
