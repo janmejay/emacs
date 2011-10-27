@@ -1,7 +1,7 @@
 ; rinari
 (vendor 'rinari)
 (setq rinari-tags-file-name "TAGS")
-(add-hook 'rinari-minor-mode-hook 
+(add-hook 'rinari-minor-mode-hook
           (lambda ()
             (define-key rinari-minor-mode-map (kbd "A-r") 'rinari-test)))
 

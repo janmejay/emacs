@@ -27,16 +27,16 @@
 
 ; rubyish
 (defun select (list body)
-  (if (empty? list) 
+  (if (empty? list)
       nil
     (if (funcall body (car list))
         (cons (car list) (select (cdr list) body))
       (select (cdr list) body))))
 
 ; rubyish
-(defun reject (list body) 
+(defun reject (list body)
   (if (empty? list)
       nil
     (if (funcall body (car list))
-        (reject (cdr list) body)        
+        (reject (cdr list) body)
       (cons (car list) (reject (cdr list) body)))))

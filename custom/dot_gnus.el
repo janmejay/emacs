@@ -24,5 +24,5 @@
 
 (define-key message-mode-map (kbd "C-j") 'mml-attach-file)
 
-(setq gnus-posting-styles 
+(setq gnus-posting-styles
       '((".*" (signature "Regards,\nJanmejay\nhttp://codehunk.wordpress.com"))))

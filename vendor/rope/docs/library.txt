@@ -548,7 +548,7 @@ operator (see the restructuring section of `overview.txt`_)::
   >>> project.do(restructuring.get_changes())
   >>> mod2.read()
   u'import mod1\nprint(2 ** 3)\n'
-  
+
   # Cleaning up
   >>> mod1.remove()
   >>> mod2.remove()

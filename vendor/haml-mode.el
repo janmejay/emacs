@@ -327,7 +327,7 @@ whichever comes first."
 (defun haml-output-region (start end)
   "Displays the HTML output for the current block of Haml code."
   (interactive "r")
-  (kill-new (buffer-substring start end)) 
+  (kill-new (buffer-substring start end))
   (with-temp-buffer
     (yank)
     (haml-indent-region (point-min) (point-max))
