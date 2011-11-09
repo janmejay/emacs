@@ -1,12 +1,3 @@
-(defvar daddy-minor-mode-map (make-sparse-keymap) "daddy-minor-mode keymap.")
-
-(define-minor-mode daddy-minor-mode
-    "A minor mode so that my key settings override annoying major/minor modes."
-  t
-  " daddy"
-  'daddy-minor-mode-map)
-
-
 (defun daddy-minibuffer-setup-hook ()
   (daddy-minor-mode 0))
 
@@ -14,4 +5,17 @@
 
 (daddy-minor-mode 1)
 
-(define-key daddy-minor-mode-map "\C-c\C-t" 'org-todo)
+(defvar *daddy-mode-map*
+  (let ((map (make-sparse-keymap)))
+;;    (define-key map [(control c)(control t)] 'org-todo)
+    map))
+
+(defun arm-twist-textmate-mode ()
+  (define-key *textmate-mode-map* [(control c)(control t)] 'org-todo)
+  (global-set-key (kbd "C-c <f12>") 'textmate-clear-cache))
+
+(define-minor-mode daddy-minor-mode "A minor mode to arm-twist annoying major/minor modes."
+  :lighter " daddy" :global t :keymap *daddy-mode-map*
+  (arm-twist-textmate-mode))
+
+(provide 'daddy)
