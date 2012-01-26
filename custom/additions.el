@@ -189,3 +189,5 @@
   (interactive)
   (menu-bar-mode)
   (tool-bar-mode))
+
+(setq c-default-style "linux")

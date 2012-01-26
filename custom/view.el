@@ -55,8 +55,13 @@
 (setq mac-allow-anti-aliasing nil)
 
 ;; Frame title : set to buffer name
-(setq frame-title-format "Emacs - %f ")
 (setq icon-title-format  "Emacs - %b")
+(setq-default frame-title-format
+              (list '((buffer-file-name " %f"
+                       (dired-directory
+                        dired-directory
+                        (revert-buffer-function " %b"
+                                                ("%b - Dir:  " default-directory)))))))
 
 ;; Editor Preferences
 (column-number-mode t)  ;; Show column numbers
@@ -86,3 +91,5 @@
 
 (require 'highlight-current-line)
 (highlight-current-line-set-bg-color "#E5F5B3")
+
+(setq inhibit-startup-message t)

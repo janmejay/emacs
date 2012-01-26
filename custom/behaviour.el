@@ -251,6 +251,8 @@
 
 (global-set-key (kbd "<f11>") 'fullscreen)
 
+(global-set-key (kbd "M-?") 'tags-search)
+
 (setq slime-lisp-implementations
       `((sbcl ("sbcl"))
 ;;        (sbcl ("sbcl"))
@@ -284,3 +286,6 @@
 (call-interactively 'server-start)
 
 (require 'browse-kill-ring)
+
+(show-paren-mode 1)
+(column-number-mode 1)
