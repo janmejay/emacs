@@ -82,7 +82,7 @@ in the --type argument to the ack command")
                                nil
                                nil
                                'ack-history)))
-  (compilation-start (concat command-args " " (textmate-project-root)) 
+  (compilation-start (concat command-args " " (textmate-project-root))
                      'ack-mode))
 
 (provide 'ack)

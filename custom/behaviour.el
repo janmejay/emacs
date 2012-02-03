@@ -130,7 +130,7 @@
 
 (defun my-python-mode-hook ()
   (pair-mode)
-  (let ((key-map 
+  (let ((key-map
          (if (boundp 'py-mode-map) py-mode-map python-mode-map)))
     (define-key key-map (kbd "C-M-/") 'rope-code-assist)))
 
@@ -194,7 +194,7 @@
 (global-set-key (kbd "<f5>") 'toggle-ecb-activation)
 
 ;;pick up the corresponding tags file by recursively looking up parent dirs and add it to tags-table-list
-(defadvice find-tag 
+(defadvice find-tag
   (before discover-before-lookup)
   (discover-corresponding-tags-file))
 
@@ -209,14 +209,14 @@
 (define-key haml-mode-map (kbd "<RET>") 'newline-and-indent-in-haml)
 (define-key haml-mode-map (kbd "C-;") 'indent-haml-region)
 
-;;(setq js2-mode-must-byte-compile nil) 
+;;(setq js2-mode-must-byte-compile nil)
 
 (setq x-select-enable-clipboard t)
 
 (global-set-key (kbd "C-M-t") 'transpose-lines)
 
-(add-hook 'js2-mode-hook 
-          (lambda () 
+(add-hook 'js2-mode-hook
+          (lambda ()
             (define-key js2-mode-map (kbd "C-c C-c") 'js-camelize)))
 
 (global-set-key (kbd "<end>") 'bury-buffer)
@@ -239,7 +239,7 @@
       browse-url-generic-program "/usr/bin/chromium")
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link) 
+(define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 
 (defun google-region (beg end)

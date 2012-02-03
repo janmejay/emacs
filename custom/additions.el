@@ -121,7 +121,7 @@
                             ((file-exists-p possible-tags-file) (add-to-list 'tags-table-list  possible-tags-file))
                             ((string= "/TAGS" possible-tags-file) (error "no tags file found"))
                             (t (find-tags-file-r (directory-file-name parent)))))))
-    
+
     (if (buffer-file-name)
         (find-tags-file-r (buffer-file-name)))))
 
@@ -149,8 +149,8 @@
     index in STRING."
   (let ((case-fold-search nil))
     (while (string-match "[A-Z]" s (or start 1))
-      (setq s (replace-match (concat (or sep "_") 
-                                     (downcase (match-string 0 s))) 
+      (setq s (replace-match (concat (or sep "_")
+                                     (downcase (match-string 0 s)))
                              t nil s)))
     (downcase s)))
 

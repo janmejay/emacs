@@ -22,7 +22,7 @@
 
 ; no printing!
 (when (boundp 'osx-key-mode-map)
- (define-key osx-key-mode-map (kbd "A-p") 
+ (define-key osx-key-mode-map (kbd "A-p")
    '(lambda () (interactive) (message "noop"))))
 
 ; no mailing!

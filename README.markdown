@@ -1,9 +1,9 @@
 -> What is this? : This is my emacs setup, geared towards ruby/rails and elisp, once-in-a-while c++ development.
 
--> How to use this thing? : Assuming you are on unix/mac.... these steps should work.... 
+-> How to use this thing? : Assuming you are on unix/mac.... these steps should work....
     $ cd
     $ # install python and pymacs using your package manager (aptitude/emerge/yum/yast... whatever)
-    $ # if you installed emacs from source or your dist doesn't wire pymacs in site-lisp.el, 
+    $ # if you installed emacs from source or your dist doesn't wire pymacs in site-lisp.el,
     $ # then you need to add pymacs initialization to your .emacs before loading emacs.el
     $ # try doing M-x load-library RET pymacs RET in your emacs session to find out if pymacs has been wired in
     $ # do the next line only if pymacs loading failed

@@ -5,7 +5,7 @@
     (if (> (x-display-pixel-width) 1280)
         (add-to-list 'default-frame-alist (cons 'width 203))
       (add-to-list 'default-frame-alist (cons 'width 80)))
-    (add-to-list 'default-frame-alist 
+    (add-to-list 'default-frame-alist
                  (cons 'height (/ (- (x-display-pixel-height) 70) (frame-char-height))))))
   (enlarge-window-horizontally 20)
   (set-frame-position (selected-frame) 0 0))
@@ -69,8 +69,8 @@
 (setq-default truncate-lines t)
 (setq scroll-step 1
       scroll-margin 3
-      scroll-conservatively 10000)   ;; Scrolling 
-(show-paren-mode t)                  ;; Highlight parens 
+      scroll-conservatively 10000)   ;; Scrolling
+(show-paren-mode t)                  ;; Highlight parens
 (setq show-paren-style 'parentheses) ;; Shor parens
 (blink-cursor-mode nil)              ;; Disable blinking of cursor
 (fset 'yes-or-no-p 'y-or-n-p)        ;; Alias Y and N

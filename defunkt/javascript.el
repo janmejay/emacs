@@ -10,15 +10,15 @@
   (insert "console.log()")
   (backward-char))
 
-(defun js2-execute-buffer () 
+(defun js2-execute-buffer ()
   (interactive)
   (shell-command (concat "johnson " (buffer-file-name))))
 
-(add-hook 'js2-mode-hook '(lambda () 
+(add-hook 'js2-mode-hook '(lambda ()
                             (define-key js2-mode-map (kbd "A-r") 'js2-execute-buffer)
                             (define-key js2-mode-map (kbd "A-R") 'js2-execute-line)
                             (define-key js2-mode-map "\C-T" 'js2-insert-console)
-                            
+
                             (defun js-continued-var-decl-list-p ()
                               "Return non-nil if point is inside a continued variable declaration
 list."
@@ -26,8 +26,8 @@ list."
                               (let ((start (save-excursion (js-re-search-backward "\\<var\\>" nil t))))
                                 (and start
                                      (save-excursion (re-search-backward "\n" start t))
-                                     (not (save-excursion 
-                                            (js-re-search-backward 
+                                     (not (save-excursion
+                                            (js-re-search-backward
                                              ";\\|[^, \t][ \t]*\\(/[/*]\\|$\\)" start t))))))
                             (defun js-proper-indentation (parse-status)
                               "Return the proper indentation for the current line."

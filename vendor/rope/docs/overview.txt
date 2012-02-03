@@ -189,7 +189,7 @@ exact match or not.  For example after renaming `C.a_func` when the
       arg.a_func()
 
   C().a_func()
-  
+
 we would have::
 
   class C(object):
@@ -235,7 +235,7 @@ For instance if you perform move method on `a_method` in::
 You will be asked for the destination field and the name of the new
 method.  If you use ``attr`` and ``new_method`` in these fields
 and press enter, you'll have::
-      
+
   class A(object):
 
       def new_method(self):
@@ -291,7 +291,7 @@ refactoring to move fields.  For instance::
 
 consider we want to move `attr` to `A`.  We can do that by renaming `attr`
 to `a.attr`::
-  
+
   class A(object):
       pass
 
@@ -792,7 +792,7 @@ Restructurings come to rescue::
   goal:
    ${inst}.f1(${p1})
    ${inst}.f2(${p2})
-  
+
   args:
    inst: type=mod.A
 

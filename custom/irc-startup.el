@@ -26,9 +26,9 @@
 (setq rcirc-default-user-name "janmejay")
 (setq rcirc-default-user-full-name "Janmejay Singh")
 
-(setq rcirc-server-alist 
+(setq rcirc-server-alist
       '(("irc.freenode.net" :channels
-         ("#gentoo" "#debian" "#emacs" "#gosu" "#rubyonrails" "#ruby")))) 
+         ("#gentoo" "#debian" "#emacs" "#gosu" "#rubyonrails" "#ruby"))))
 
 
 ;; Connect to servers.
@@ -42,12 +42,12 @@
 
 (defun layout-irc-windows-all-over-the-window ()
   (let ((irc-buffer-names (flattened-channel-buffer-list rcirc-server-alist '())))
-    (let ((width (/ (window-width) (/ (+ (length irc-buffer-names) 1) 2)))) 
+    (let ((width (/ (window-width) (/ (+ (length irc-buffer-names) 1) 2))))
       (create-columns-with-2-chanels-each irc-buffer-names (selected-window) width))))
 
 (defun create-columns-with-2-chanels-each (buffer-list splittable column-width)
   (set-window-buffer splittable (car buffer-list))
-  (if (> (length buffer-list) 2) 
+  (if (> (length buffer-list) 2)
       (let ((new-window (split-window splittable column-width t)))
         (create-columns-with-2-chanels-each (cddr buffer-list) new-window column-width)))
   (let ((bottom-buffer (cadr buffer-list)))
