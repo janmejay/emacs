@@ -289,3 +289,7 @@
 
 (show-paren-mode 1)
 (column-number-mode 1)
+
+;; line numbers for everyone
+(require 'linum+)
+(global-linum-mode 1)

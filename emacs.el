@@ -2,6 +2,7 @@
 
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
+                   "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
                    "~/.emacs.d/vendor/collection"
