@@ -19,9 +19,9 @@
 
 ;;;;;;;;; yasnippet
 (require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
-(yas/load-directory "~/.emacs.d/custom/snippets")
+(setq yas/snippet-dirs '("~/.emacs.d/vendor/yasnippet/snippets" "~/.emacs.d/custom/snippets"))
+(yas/global-mode 1)    
+(setq yas/prompt-functions '(yas/ido-prompt yas/x-prompt yas/dropdown-prompt))
 
 ;;;;;;;;; css-mode
 (load "goodies/css-mode")
@@ -293,3 +293,6 @@
 ;; line numbers for everyone
 (require 'linum+)
 (global-linum-mode 1)
+
+;;gud keys
+(global-set-key (kbd "<f12>") 'gdb-display-assembler-buffer)
