@@ -6,7 +6,7 @@
         (add-to-list 'default-frame-alist (cons 'width 203))
       (add-to-list 'default-frame-alist (cons 'width 80)))
     (add-to-list 'default-frame-alist 
-                 (cons 'height (/ (- (x-display-pixel-height) 70) (frame-char-height))))))
+                 (cons 'height (/ (- (x-display-pixel-height) 60) (frame-char-height))))))
   (enlarge-window-horizontally 20)
   (set-frame-position (selected-frame) 0 0))
 

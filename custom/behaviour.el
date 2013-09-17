@@ -1,3 +1,6 @@
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 ;;;;;; ido
 (setq confirm-nonexistent-file-or-buffer nil)
 (require 'ido)
@@ -35,12 +38,12 @@
 ;;;;;;;;;;ruby & rinari
 
 (load "rinari/rinari")
-(load "collection/ruby/ruby-mode")
-(load "collection/ruby/inf-ruby")
-(load "collection/ruby/ruby-compilation")
+(load "ruby/ruby-mode/ruby-mode")
+(load "ruby/inf-ruby/inf-ruby")
+;;(load "ruby/ruby-compilation/ruby-compilation");;some idoit has wired dependency on his local file
 (require 'cl)
-(require 'toggle)
-(require 'find-file-in-project)
+;;(require 'toggle) ;; don't know what this one is
+;;(require 'find-file-in-project) ;; lost after 16 sep pull from upstream
 ;;(require 'rinari-movement)
 ;;(load "collection/ruby/rinari")
 (define-key ruby-mode-map (kbd "<return>") 'ruby-reindent-then-newline-and-indent)
@@ -53,25 +56,25 @@
 
 ;;renari html support tweak
 (define-key rinari-minor-mode-map
-  "\C-c\M-s" 'rinari-console)
+    "\C-c\M-s" 'rinari-console)
 (define-key rinari-minor-mode-map
-  "\C-c\C-v" (lambda () (interactive) (toggle-buffer 'rails-view)))
+    "\C-c\C-v" (lambda () (interactive) (toggle-buffer 'rails-view)))
 (define-key rinari-minor-mode-map
-  "\C-c\C-t" 'toggle-buffer)
+    "\C-c\C-t" 'toggle-buffer)
 (define-key rinari-minor-mode-map
-  "\C-c\C-r" 'ruby-rake)
+    "\C-c\C-r" 'ruby-rake)
 (define-key rinari-minor-mode-map
-  "\C-c\C-g" 'rinari-get-path)
+    "\C-c\C-g" 'rinari-get-path)
 (define-key rinari-minor-mode-map
-  "\C-c\C-f" 'rinari-find-config-file)
+    "\C-c\C-f" 'rinari-find-config-file)
 (define-key rinari-minor-mode-map
-  "\C-c\C-b" 'rinari-find-by-context)
+    "\C-c\C-b" 'rinari-find-by-context)
 ;;(define-key rinari-minor-mode-map
 ;;  "\C-x\C-\M-F" 'find-file-in-project)
 (define-key ruby-mode-map (kbd "C-{") 'ruby-encomment-region)
 (define-key ruby-mode-map (kbd "C-}") 'ruby-decomment-region)
 
-(load "ruby/rubydb3x")
+(load "zenspider/third-party/rubydb3x")
 
 ;;;;; running tests
 (require 'test-runner)
@@ -84,6 +87,11 @@
 (global-set-key (kbd "<f6>") 'shell)
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
+
+(defun my-sh-mode-hook ()
+  (setq sh-basic-offset 4
+        sh-indentation 4))
+(add-hook 'sh-mode-hook 'my-sh-mode-hook)
 
 (defun my-c++-mode-hook ()
   (setq tab-width 4)
@@ -189,13 +197,13 @@
 
 (global-set-key (kbd "C-j") 'dumb-indent-without-reindent-of-current-line)
 
-(global-set-key (kbd "C-M-y") 'longlines-mode)
+(global-set-key (kbd "C-M-y") 'visual-line-mode)
 (global-set-key (kbd "C-x C-M-t") 'find-test-in-project)
 (global-set-key (kbd "<f5>") 'toggle-ecb-activation)
 
 ;;pick up the corresponding tags file by recursively looking up parent dirs and add it to tags-table-list
 (defadvice find-tag 
-  (before discover-before-lookup)
+    (before discover-before-lookup)
   (discover-corresponding-tags-file))
 
 (ad-activate 'find-tag)
@@ -215,6 +223,11 @@
 
 (global-set-key (kbd "C-M-t") 'transpose-lines)
 
+(add-hook 'css-mode-hook 
+          (lambda () 
+            (setq tab-width 2)))
+
+
 (add-hook 'js2-mode-hook 
           (lambda () 
             (define-key js2-mode-map (kbd "C-c C-c") 'js-camelize)))
@@ -226,11 +239,12 @@
                (cua-mode nil)
                (put 'set-goal-column 'disabled nil)
 
-               (add-to-list 'auto-mode-alist '("\\.rhtml$" . nxml-mode))
-               (add-to-list 'auto-mode-alist '("\\.html.erb$" . nxml-mode))
+               (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
+               (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
                (add-to-list 'auto-mode-alist '("buildfile" . ruby-mode))
                (add-to-list 'auto-mode-alist '("rakefile" . ruby-mode))
                (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+               (add-to-list 'auto-mode-alist '("\\.mk$" . makefile-mode))
                (define-key *textmate-mode-map* (kbd "C-S-n") 'textmate-move-line-down)
                (define-key *textmate-mode-map* (kbd "C-S-p") 'textmate-move-line-up)
                (global-set-key (kbd "C-z") 'emacs-project-find)))
@@ -255,19 +269,19 @@
 
 (setq slime-lisp-implementations
       `((sbcl ("sbcl"))
-;;        (sbcl ("sbcl"))
+        ;;        (sbcl ("sbcl"))
         ))
 
 (eval-after-load "slime"
   '(progn
-     (require 'slime-fancy)
-     (require 'slime-banner)
-     (require 'slime-asdf)
-     (slime-banner-init)
-     (slime-asdf-init)
-     (setq slime-complete-symbol*-fancy t)
-     (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
-     (slime-setup)))
+    (require 'slime-fancy)
+    (require 'slime-banner)
+    (require 'slime-asdf)
+    (slime-banner-init)
+    (slime-asdf-init)
+    (setq slime-complete-symbol*-fancy t)
+    (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
+    (slime-setup)))
 
 (require 'slime-autoloads)
 (require 'slime)

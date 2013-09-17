@@ -24,7 +24,6 @@
  '(show-trailing-whitespace t)
  '(standard-indent 2)
  '(tabbar-mode t nil (tabbar))
- '(transient-mark-mode t)
  '(whitespace-global-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

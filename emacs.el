@@ -7,6 +7,7 @@
                    "~/.emacs.d/vendor/goodies/test-runner"
                    "~/.emacs.d/vendor/collection"
                    "~/.emacs.d/vendor/collection/ruby"
+                   "~/.emacs.d/vendor/collection/js2-mode"
                    "~/.emacs.d/vendor/rinari"
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
@@ -30,6 +31,8 @@
 
 (require 'haml-mode)
 (require 'sass-mode)
+(require 'csv-mode)
+(require 'js2-mode)
 
 (load "custom/view")
 (load "custom/additions")
@@ -37,8 +40,9 @@
 (load "custom/irc-startup")
 (load "~/.emacs.d/vendor/scratch-el/scratch.el")
 
-(require 'tabbar)
+;;(require 'tabbar);; lost after latest upgrade, don't know what it does, should bring it back soon
 
 (load "defunkt")
 (load "custom/daddy")
 (load "custom/overrides.el")
+(require 'bison-mode)

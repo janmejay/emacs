@@ -27,7 +27,7 @@
 	url = git://github.com/janmejay/emacs_goodies.git
 [submodule "vendor/collection"]
 	path = vendor/collection
-	url = git://github.com/georgi/elisp.git
+	url = git://github.com/janmejay/elisp.git
 [submodule "vendor/rinari"]
 	path = vendor/rinari
 	url = git://github.com/eschulte/rinari.git
@@ -55,3 +55,15 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = git://github.com/capitaomorte/yasnippet.git
+[submodule "vendor/ruby/ruby-mode"]
+	path = vendor/ruby/ruby-mode
+	url = git://github.com/qoobaa/ruby-mode.git
+[submodule "vendor/ruby/inf-ruby"]
+	path = vendor/ruby/inf-ruby
+	url = git://github.com/nonsequitur/inf-ruby.git
+[submodule "vendor/ruby/ruby-compilation"]
+	path = vendor/ruby/ruby-compilation
+	url = git://github.com/habib/ruby-compilation.git
+[submodule "vendor/zenspider"]
+	path = vendor/zenspider
+	url = https://github.com/zenspider/elisp.git
