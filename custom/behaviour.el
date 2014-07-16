@@ -20,6 +20,8 @@
 (setq ido-use-filename-at-point nil)
 (setq ido-enable-flex-matching nil)
 
+(setq enable-recursive-minibuffers t)
+
 ;;;;;;;;; yasnippet
 (require 'yasnippet)
 (setq yas/snippet-dirs '("~/.emacs.d/vendor/yasnippet/snippets" "~/.emacs.d/custom/snippets"))
@@ -87,6 +89,9 @@
 (global-set-key (kbd "<f6>") 'shell)
 (setq make-backup-files nil)
 (setq-default indent-tabs-mode nil)
+
+(global-set-key (kbd "C-x r b") 'ido-bookmark-jump)
+;;(define-key ido-file-dir-completion-map (kbd "C-x r b") 'ido-bookmark-jump)
 
 (defun my-sh-mode-hook ()
   (setq sh-basic-offset 4
@@ -310,3 +315,6 @@
 
 ;;gud keys
 (global-set-key (kbd "<f12>") 'gdb-display-assembler-buffer)
+
+
+(require 'scala-mode2)

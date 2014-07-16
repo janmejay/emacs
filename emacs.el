@@ -12,10 +12,12 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/ecb"
+                   "~/.emacs.d/vendor/ess/lisp"
                    ;;"~/.emacs.d/vendor/jde/lisp"
                    "~/.emacs.d/vendor/slime"
                    "~/.emacs.d/vendor/slime/contrib"
-                   "~/.emacs.d/vendor/clojure"))
+                   "~/.emacs.d/vendor/clojure"
+                   "~/.emacs.d/vendor/scala-mode2"))
 (nconc exec-path '("~/bin"))
 
 (require 'ecb)
@@ -33,6 +35,7 @@
 (require 'sass-mode)
 (require 'csv-mode)
 (require 'js2-mode)
+(require 'ess-site)
 
 (load "custom/view")
 (load "custom/additions")

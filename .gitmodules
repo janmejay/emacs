@@ -67,3 +67,9 @@
 [submodule "vendor/zenspider"]
 	path = vendor/zenspider
 	url = https://github.com/zenspider/elisp.git
+[submodule "vendor/scala-mode2"]
+	path = vendor/scala-mode2
+	url = git://github.com/hvesalai/scala-mode2.git
+[submodule "vendor/ess"]
+	path = vendor/ess
+	url = https://github.com/emacs-ess/ESS.git
