@@ -11,6 +11,7 @@
                    "~/.emacs.d/vendor/rinari"
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
+                   "~/.emacs.d/vendor/puppet"
                    "~/.emacs.d/vendor/ecb"
                    "~/.emacs.d/vendor/ess/lisp"
                    ;;"~/.emacs.d/vendor/jde/lisp"
@@ -42,6 +43,7 @@
 (load "custom/behaviour")
 (load "custom/irc-startup")
 (load "~/.emacs.d/vendor/scratch-el/scratch.el")
+(load "puppet-mode-init")
 
 ;;(require 'tabbar);; lost after latest upgrade, don't know what it does, should bring it back soon
 

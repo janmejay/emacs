@@ -206,6 +206,7 @@
     '(("alpha" "α")
       ("beta" "β")
       ("gamma" "γ")
+      ("delta" "δ")
       ("theta" "θ")
       ("inf" "∞")
       ("lambda" "λ")
