@@ -18,7 +18,8 @@
                    "~/.emacs.d/vendor/slime"
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"
-                   "~/.emacs.d/vendor/scala-mode2"))
+                   "~/.emacs.d/vendor/scala-mode2"
+		   "~/.emacs.d/vendor/go"))
 (nconc exec-path '("~/bin"))
 
 (require 'ecb)
@@ -51,3 +52,5 @@
 (load "custom/daddy")
 (load "custom/overrides.el")
 (require 'bison-mode)
+(require 'go-mode-autoloads)
+

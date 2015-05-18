@@ -1,6 +1,7 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(transient-mark-mode t)
 ;;;;;; ido
 (setq confirm-nonexistent-file-or-buffer nil)
 (require 'ido)
@@ -29,7 +30,7 @@
 (setq yas/prompt-functions '(yas/ido-prompt yas/x-prompt yas/dropdown-prompt))
 
 ;;;;;;;;; css-mode
-(load "goodies/css-mode")
+;;(load "goodies/css-mode")
 
 ;; enable test-case-mode automatically
 (add-hook 'find-file-hook 'enable-test-case-mode-if-test)
@@ -268,6 +269,8 @@
 
 (global-set-key (kbd "C-c C-q") 'google-region)
 
+(global-set-key (kbd "M-7") 'cscope-find-this-symbol)
+
 (global-set-key (kbd "<f11>") 'fullscreen)
 
 (global-set-key (kbd "M-?") 'tags-search)
@@ -318,3 +321,9 @@
 
 
 (require 'scala-mode2)
+
+;;stats
+(setq ess-smart-S-assign-key ":")
+(ess-toggle-S-assign nil)
+(ess-toggle-S-assign nil)
+(ess-toggle-underscore nil)
