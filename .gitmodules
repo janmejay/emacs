@@ -79,3 +79,6 @@
 [submodule "vendor/go"]
 	path = vendor/go
 	url = git://github.com/dominikh/go-mode.el.git
+[submodule "vendor/rust"]
+	path = vendor/rust
+	url = git://github.com/rust-lang/rust-mode.git

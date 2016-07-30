@@ -5,6 +5,7 @@
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
+                   "~/.emacs.d/vendor/rust"
                    "~/.emacs.d/vendor/collection"
                    "~/.emacs.d/vendor/collection/ruby"
                    "~/.emacs.d/vendor/collection/js2-mode"
@@ -19,7 +20,7 @@
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"
                    "~/.emacs.d/vendor/scala-mode2"
-		   "~/.emacs.d/vendor/go"))
+                   "~/.emacs.d/vendor/go"))
 (nconc exec-path '("~/bin"))
 
 (require 'ecb)
@@ -45,6 +46,8 @@
 (load "custom/irc-startup")
 (load "~/.emacs.d/vendor/scratch-el/scratch.el")
 (load "puppet-mode-init")
+
+(autoload 'rust-mode "rust-mode" nil t)
 
 ;;(require 'tabbar);; lost after latest upgrade, don't know what it does, should bring it back soon
 

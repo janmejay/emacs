@@ -327,3 +327,6 @@
 (ess-toggle-S-assign nil)
 (ess-toggle-S-assign nil)
 (ess-toggle-underscore nil)
+
+;;rust
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
