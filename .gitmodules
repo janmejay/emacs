@@ -52,9 +52,6 @@
 [submodule "vendor/cedet"]
 	path = vendor/cedet
 	url = http://github.com/emacsmirror/cedet.git
-[submodule "vendor/yasnippet"]
-	path = vendor/yasnippet
-	url = git://github.com/capitaomorte/yasnippet.git
 [submodule "vendor/ruby/ruby-mode"]
 	path = vendor/ruby/ruby-mode
 	url = git://github.com/qoobaa/ruby-mode.git

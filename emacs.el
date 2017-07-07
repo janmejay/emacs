@@ -1,4 +1,4 @@
-(setq overrides)
+(setq overrides nil)
 
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
