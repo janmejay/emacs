@@ -16,7 +16,7 @@ class Logger(object):
 
     def _show(self, message):
         if message is None:
-            print message
+            print(message)
         else:
             self.message(message)
 
@@ -27,7 +27,7 @@ def lisphook(func):
     def newfunc(*args, **kwds):
         try:
             func(*args, **kwds)
-        except Exception, e:
+        except Exception as e:
             trace = str(traceback.format_exc())
             short = 'Ignored an exception in ropemode hook: %s' % \
                     _exception_message(e)
@@ -51,7 +51,7 @@ def _exception_handler(func):
     def newfunc(*args, **kwds):
         try:
             return func(*args, **kwds)
-        except exceptions.RopeError, e:
+        except exceptions.RopeError as e:
             short = None
             if isinstance(e, input_exceptions):
                 short = _exception_message(e)

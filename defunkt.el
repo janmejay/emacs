@@ -22,10 +22,10 @@
 (vendor 'haml-mode)
 (vendor 'rhtml-mode)
 (vendor 'sass-mode)
-(vendor 'textile-mode)
+;;(vendor 'textile-mode)
 
-(vendor 'textmate)
-(textmate-mode)
+;;(vendor 'textmate)
+;;(textmate-mode)
 
 (vendor 'yaml-mode)
 

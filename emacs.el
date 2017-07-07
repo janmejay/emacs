@@ -27,8 +27,8 @@
 
 ;;making rope available in python load path assuming pymacs is installed
 ;;if not, use your OS' package manager to get it. (on gentoo i use app-emacs/pymacs)
-(setq pymacs-load-path '("~/.emacs.d/vendor/rope"
-                         "~/.emacs.d/vendor/ropemacs"))
+;; (setq pymacs-load-path '("~/.emacs.d/vendor/rope"
+;;                          "~/.emacs.d/vendor/ropemacs"))
 
 ;;elib must be installed locally (debian (elib) and gentoo (app-emacs/elib) have it available as a package)
 

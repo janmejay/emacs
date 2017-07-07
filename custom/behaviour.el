@@ -152,9 +152,9 @@
   (define-key ruby-mode-map (kbd "<tab>") 'yas/expand))
 
 ;; ropemacs configuration
-(setq ropemacs-enable-shortcuts 'nil)
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+;; (setq ropemacs-enable-shortcuts 'nil)
+;; (require 'pymacs)
+;; (pymacs-load "ropemacs" "rope-")
 
 
 ;; Add all of the hooks...
