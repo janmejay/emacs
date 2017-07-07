@@ -251,8 +251,6 @@
                (add-to-list 'auto-mode-alist '("rakefile" . ruby-mode))
                (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
                (add-to-list 'auto-mode-alist '("\\.mk$" . makefile-mode))
-               (define-key *textmate-mode-map* (kbd "C-S-n") 'textmate-move-line-down)
-               (define-key *textmate-mode-map* (kbd "C-S-p") 'textmate-move-line-up)
                (global-set-key (kbd "C-z") 'emacs-project-find)))
 
 (setq browse-url-browser-function 'browse-url-generic
@@ -330,3 +328,6 @@
 
 ;;rust
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
+;;bind locate
+(global-set-key (kbd "M-t") 'locate)
