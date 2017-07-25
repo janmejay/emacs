@@ -2,6 +2,8 @@
 
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
+                   "~/.emacs.d/vendor/grizzl"
+                   "~/.emacs.d/vendor/fiplr"
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
@@ -34,6 +36,7 @@
 
 ;;(require 'jde)
 
+(require 'fiplr)
 (require 'haml-mode)
 (require 'sass-mode)
 (require 'csv-mode)

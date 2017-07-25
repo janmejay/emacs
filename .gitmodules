@@ -79,3 +79,12 @@
 [submodule "vendor/rust"]
 	path = vendor/rust
 	url = git://github.com/rust-lang/rust-mode.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = git://github.com/joaotavora/yasnippet
+[submodule "vendor/fiplr"]
+	path = vendor/fiplr
+	url = git://github.com/grizzl/fiplr.git
+[submodule "vendor/grizzl"]
+	path = vendor/grizzl
+	url = git://github.com/grizzl/grizzl.git
