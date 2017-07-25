@@ -13,3 +13,4 @@ TAGS
 tramp
 vendor/enigma
 *.pyc
+elpa/

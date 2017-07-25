@@ -2,8 +2,6 @@
 
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
-                   "~/.emacs.d/vendor/grizzl"
-                   "~/.emacs.d/vendor/fiplr"
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
@@ -25,7 +23,31 @@
                    "~/.emacs.d/vendor/go"))
 (nconc exec-path '("~/bin"))
 
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/")
+             t)
+
+(defvar my/packages
+  '(helm-projectile))
+
+(require 'cl-lib)
+
+(defun my/install-packages ()
+  "Ensure the packages I use are installed. See `my/packages'."
+  (interactive)
+  (let ((missing-packages (cl-remove-if #'package-installed-p my/packages)))
+    (when missing-packages
+      (message "Installing %d missing package(s)" (length missing-packages))
+      (package-refresh-contents)
+      (mapc #'package-install missing-packages))))
+
+(my/install-packages)
+
+(require 'helm-projectile)
+(helm-projectile-on)
+
 (require 'ecb)
+
 
 ;;making rope available in python load path assuming pymacs is installed
 ;;if not, use your OS' package manager to get it. (on gentoo i use app-emacs/pymacs)
@@ -36,7 +58,6 @@
 
 ;;(require 'jde)
 
-(require 'fiplr)
 (require 'haml-mode)
 (require 'sass-mode)
 (require 'csv-mode)

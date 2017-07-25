@@ -330,4 +330,9 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;;bind locate
-(global-set-key (kbd "M-t") 'locate)
+(setq helm-mode-fuzzy-match t)
+(setq helm-completion-in-region-fuzzy-match t)
+(global-set-key (kbd "M-t") 'helm-projectile-find-file)
+
+;; (setq fiplr-ignored-globs '((directories (".git" ".svn" ".tscache" "build" "target" "gen-py" "gen-cpp"))
+;;                             (files ("*.jpg" "*.png" "*.zip" "*~" "*.class" "*.js" "*.o" "*.map"))))
