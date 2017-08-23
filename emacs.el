@@ -20,7 +20,8 @@
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"
                    "~/.emacs.d/vendor/scala-mode2"
-                   "~/.emacs.d/vendor/go"))
+                   "~/.emacs.d/vendor/go"
+                   "~/.emacs.d/vendor/thrift-mode"))
 (nconc exec-path '("~/bin"))
 
 (add-to-list 'package-archives
@@ -28,7 +29,8 @@
              t)
 
 (defvar my/packages
-  '(helm-projectile))
+  '(helm-projectile)
+  '(helm-ag))
 
 (require 'cl-lib)
 
@@ -45,6 +47,7 @@
 
 (require 'helm-projectile)
 (helm-projectile-on)
+(require 'helm-ag)
 
 (require 'ecb)
 
@@ -63,6 +66,7 @@
 (require 'csv-mode)
 (require 'js2-mode)
 (require 'ess-site)
+(require 'thrift-mode)
 
 (load "custom/view")
 (load "custom/additions")

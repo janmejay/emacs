@@ -82,3 +82,6 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = git://github.com/joaotavora/yasnippet
+[submodule "vendor/thrift-mode"]
+	path = vendor/thrift-mode
+	url = git://github.com/davidmiller/thrift-mode.git

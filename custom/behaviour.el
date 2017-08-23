@@ -269,6 +269,8 @@
 
 (global-set-key (kbd "M-7") 'cscope-find-this-symbol)
 
+(global-set-key (kbd "M-*") 'pop-tag-mark)
+
 (global-set-key (kbd "<f11>") 'fullscreen)
 
 (global-set-key (kbd "M-?") 'tags-search)
@@ -336,3 +338,13 @@
 
 ;; (setq fiplr-ignored-globs '((directories (".git" ".svn" ".tscache" "build" "target" "gen-py" "gen-cpp"))
 ;;                             (files ("*.jpg" "*.png" "*.zip" "*~" "*.class" "*.js" "*.o" "*.map"))))
+
+;;go
+(require 'go-guru)
+
+;;silver searcher
+(global-set-key (kbd "C-c g") 'helm-ag-project-root)
+
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
