@@ -9,7 +9,6 @@
  '(ecb-options-version "2.33beta2")
  '(ecb-source-path (find-all-emacs-projects))
  '(ecb-tip-of-the-day nil)
- '(case-fold-search nil)
  '(cua-mode nil nil (cua-base))
  '(jde-jdk-registry (quote (("1.6" . "/usr/local/jdk_1_6/bin/java"))))
  '(jde-gen-k&r t)

@@ -26,7 +26,7 @@
 ;;;;;;;;; yasnippet
 (require 'yasnippet)
 (setq yas/snippet-dirs '("~/.emacs.d/vendor/yasnippet/snippets" "~/.emacs.d/custom/snippets"))
-(yas/global-mode 1)    
+(yas/global-mode 1)
 (setq yas/prompt-functions '(yas/ido-prompt yas/x-prompt yas/dropdown-prompt))
 
 ;;;;;;;;; css-mode
@@ -100,16 +100,16 @@
 (add-hook 'sh-mode-hook 'my-sh-mode-hook)
 
 (defun my-c++-mode-hook ()
-  (setq tab-width 4)
-  (setq c-basic-offset 4)
+  (setq tab-width 2)
+  (setq c-basic-offset 2)
   (define-key c++-mode-map "\C-m" 'reindent-then-newline-and-indent)
   (define-key c++-mode-map "\C-ce" 'c-comment-edit)
   (setq c++-auto-hungry-initial-state 'none)
   (setq c++-delete-function 'backward-delete-char)
   (setq c++-tab-always-indent t)
-  (setq c-indent-level 4)
-  (setq c-continued-statement-offset 4)
-  (setq c++-empty-arglist-indent 4))
+  (setq c-indent-level 2)
+  (setq c-continued-statement-offset 2)
+  (setq c++-empty-arglist-indent 2))
 
 (defun my-c-mode-hook ()
   (setq tab-width 4)
@@ -348,3 +348,8 @@
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
+
+(setq case-fold-search t)
+(setq ac-ignore-case nil)
+
+(global-set-key (kbd "C-c d") 'clone-indirect-buffer)
