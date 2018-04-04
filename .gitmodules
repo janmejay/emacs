@@ -85,3 +85,12 @@
 [submodule "vendor/thrift-mode"]
 	path = vendor/thrift-mode
 	url = git://github.com/davidmiller/thrift-mode.git
+[submodule "vendor/vrs"]
+	path = vendor/vrs
+	url = git://github.com/benma/visual-regexp-steroids.el.git
+[submodule "vendor/vr"]
+	path = vendor/vr
+	url = git://github.com/benma/visual-regexp.el
+[submodule "vendor/multiple-cursors"]
+	path = vendor/multiple-cursors
+	url = git://github.com/magnars/multiple-cursors.el.git

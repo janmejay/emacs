@@ -13,4 +13,7 @@ TAGS
 tramp
 vendor/enigma
 *.pyc
-elpa/
+abbrev_defs
+bookmarks
+elpa/*
+.mc-lists.el

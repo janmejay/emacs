@@ -250,3 +250,10 @@
 
 (setq-default abbrev-mode t)
 
+(defun color2 ()
+  (interactive)
+  (set-background-color "#f2ffff"))
+
+(defun use_tabs ()
+  (interactive)
+  (setq-default indent-tabs-mode t))

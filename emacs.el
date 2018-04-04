@@ -21,7 +21,10 @@
                    "~/.emacs.d/vendor/clojure"
                    "~/.emacs.d/vendor/scala-mode2"
                    "~/.emacs.d/vendor/go"
-                   "~/.emacs.d/vendor/thrift-mode"))
+                   "~/.emacs.d/vendor/thrift-mode"
+                   "~/.emacs.d/vendor/multiple-cursors"
+                   "~/.emacs.d/vendor/vr"
+                   "~/.emacs.d/vendor/vrs"))
 (nconc exec-path '("~/bin"))
 
 (add-to-list 'package-archives
@@ -67,6 +70,8 @@
 (require 'js2-mode)
 (require 'ess-site)
 (require 'thrift-mode)
+(require 'multiple-cursors)
+(require 'visual-regexp-steroids)
 
 (load "custom/view")
 (load "custom/additions")
