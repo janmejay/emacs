@@ -257,3 +257,27 @@
 (defun use_tabs ()
   (interactive)
   (setq-default indent-tabs-mode t))
+
+(defun no_tabs ()
+  (interactive)
+  (setq-default indent-tabs-mode nil))
+
+(set-face-attribute
+ 'markerpen-face-a nil
+ :underline "lightgrey"
+ :weight 'bold
+ :height 1.0
+ :background "lightyellow")
+
+(set-face-attribute
+ 'markerpen-face-b nil
+ :underline "red"
+ :weight 'bold
+ :height 1.0
+ :background "pink")
+
+(defun switch-marker-pen ()
+  (interactive)
+  (if (equal markerpen-current-pen 5)
+      (setq markerpen-current-pen 6)
+    (setq markerpen-current-pen 5)))

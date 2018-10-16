@@ -2,6 +2,11 @@
 
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
+                   "~/.emacs.d/vendor/async"
+                   "~/.emacs.d/vendor/helm"
+                   "~/.emacs.d/vendor/helm-ag"
+                   "~/.emacs.d/vendor/projectile"
+                   "~/.emacs.d/vendor/helm-projectile"
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
@@ -24,29 +29,11 @@
                    "~/.emacs.d/vendor/thrift-mode"
                    "~/.emacs.d/vendor/multiple-cursors"
                    "~/.emacs.d/vendor/vr"
-                   "~/.emacs.d/vendor/vrs"))
+                   "~/.emacs.d/vendor/vrs"
+                   "~/.emacs.d/vendor/string-inflections"))
 (nconc exec-path '("~/bin"))
 
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/")
-             t)
-
-(defvar my/packages
-  '(helm-projectile)
-  '(helm-ag))
-
 (require 'cl-lib)
-
-(defun my/install-packages ()
-  "Ensure the packages I use are installed. See `my/packages'."
-  (interactive)
-  (let ((missing-packages (cl-remove-if #'package-installed-p my/packages)))
-    (when missing-packages
-      (message "Installing %d missing package(s)" (length missing-packages))
-      (package-refresh-contents)
-      (mapc #'package-install missing-packages))))
-
-(my/install-packages)
 
 (require 'helm-projectile)
 (helm-projectile-on)
@@ -64,6 +51,7 @@
 
 ;;(require 'jde)
 
+(require 'markerpen)
 (require 'haml-mode)
 (require 'sass-mode)
 (require 'csv-mode)
@@ -89,4 +77,6 @@
 (load "custom/overrides.el")
 (require 'bison-mode)
 (require 'go-mode-autoloads)
+(require 'go-guru)
 
+(require 'string-inflection)

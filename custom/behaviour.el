@@ -363,3 +363,9 @@
 (setq ac-ignore-case nil)
 
 (global-set-key (kbd "C-c d") 'clone-indirect-buffer)
+
+(setq markerpen-current-pen 5)
+(global-set-key (kbd "M-C-m") 'markerpen-mark-region)
+(global-set-key (kbd "M-C-,") 'switch-marker-pen)
+(global-set-key (kbd "M-C-w") 'markerpen-clear-region)
+(global-set-key (kbd "M-C-c") 'markerpen-clear-all-marks)

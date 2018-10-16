@@ -94,3 +94,21 @@
 [submodule "vendor/multiple-cursors"]
 	path = vendor/multiple-cursors
 	url = git://github.com/magnars/multiple-cursors.el.git
+[submodule "vendor/string-inflections"]
+	path = vendor/string-inflections
+	url = git://github.com/akicho8/string-inflection.git
+[submodule "vendor/helm-projectile"]
+	path = vendor/helm-projectile
+	url = git@github.com:bbatsov/helm-projectile.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = git://github.com/emacs-helm/helm.git
+[submodule "vendor/projectile"]
+	path = vendor/projectile
+	url = git://github.com/bbatsov/projectile.git
+[submodule "vendor/async"]
+	path = vendor/async
+	url = git://github.com/jwiegley/emacs-async.git
+[submodule "vendor/helm-ag"]
+	path = vendor/helm-ag
+	url = git://github.com/syohex/emacs-helm-ag.git
