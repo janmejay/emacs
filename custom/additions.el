@@ -250,9 +250,17 @@
 
 (setq-default abbrev-mode t)
 
+(defun color1 ()
+  (interactive)
+  (set-background-color "#ffffff"))
+
 (defun color2 ()
   (interactive)
   (set-background-color "#f2ffff"))
+
+(defun color3 ()
+  (interactive)
+  (set-background-color "#f2f2ff"))
 
 (defun use_tabs ()
   (interactive)

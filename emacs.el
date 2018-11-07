@@ -3,10 +3,8 @@
 (nconc load-path '("~/.emacs.d"
                    "~/.emacs.d/vendor"
                    "~/.emacs.d/vendor/async"
-                   "~/.emacs.d/vendor/helm"
-                   "~/.emacs.d/vendor/helm-ag"
-                   "~/.emacs.d/vendor/projectile"
-                   "~/.emacs.d/vendor/helm-projectile"
+                   "~/.emacs.d/vendor/swiper"
+                   "~/.emacs.d/vendor/find-file-in-project"
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
@@ -35,9 +33,10 @@
 
 (require 'cl-lib)
 
-(require 'helm-projectile)
-(helm-projectile-on)
-(require 'helm-ag)
+(require 'counsel)
+(require 'swiper)
+(require 'ivy)
+(require 'find-file-in-project)
 
 (require 'ecb)
 

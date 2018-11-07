@@ -342,9 +342,8 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;;bind locate
-(setq helm-mode-fuzzy-match t)
-(setq helm-completion-in-region-fuzzy-match t)
-(global-set-key (kbd "M-t") 'helm-projectile-find-file)
+;;(global-set-key (kbd "M-t") 'find-file-in-project-by-selected)
+(global-set-key (kbd "M-t") 'counsel-git)
 
 ;; (setq fiplr-ignored-globs '((directories (".git" ".svn" ".tscache" "build" "target" "gen-py" "gen-cpp"))
 ;;                             (files ("*.jpg" "*.png" "*.zip" "*~" "*.class" "*.js" "*.o" "*.map"))))
@@ -353,7 +352,7 @@
 (require 'go-guru)
 
 ;;silver searcher
-(global-set-key (kbd "C-c g") 'helm-ag-project-root)
+(global-set-key (kbd "C-c g") 'counsel-ag)
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
@@ -369,3 +368,13 @@
 (global-set-key (kbd "M-C-,") 'switch-marker-pen)
 (global-set-key (kbd "M-C-w") 'markerpen-clear-region)
 (global-set-key (kbd "M-C-c") 'markerpen-clear-all-marks)
+
+
+;;(global-set-key (kbd "C-s") 'swiper)
+;;(global-set-key (kbd "M-x") 'counsel-M-x)
+;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
+;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
