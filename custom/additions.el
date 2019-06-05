@@ -289,3 +289,7 @@
   (if (equal markerpen-current-pen 5)
       (setq markerpen-current-pen 6)
     (setq markerpen-current-pen 5)))
+
+(defun toggle_80_col_visual ()
+  (interactive)
+  (whitespace-toggle-options 'lines-tail))

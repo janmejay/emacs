@@ -378,3 +378,8 @@
 ;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
 ;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
 ;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+
+(global-set-key (kbd "C-c b") 'text-scale-increase)
+(global-set-key (kbd "C-c s") 'text-scale-decrease)
+
+(global-set-key (kbd "C-c C-l") 'toggle_80_col_visual)
