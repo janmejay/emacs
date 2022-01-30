@@ -89,7 +89,12 @@
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)
 
-(require 'highlight-current-line)
-(highlight-current-line-set-bg-color "#E5F5B3")
+;; (require 'highlight-current-line)
+;; (highlight-current-line-set-bg-color "#E5F5B3")
+
+(require 'highline)
+(global-highline-mode)
 
 (setq inhibit-startup-message t)
+
+(set-face-attribute 'region nil :background "#cea")

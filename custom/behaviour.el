@@ -251,6 +251,7 @@
                (add-to-list 'auto-mode-alist '("rakefile" . ruby-mode))
                (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
                (add-to-list 'auto-mode-alist '("\\.mk$" . makefile-mode))
+               (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
                (global-set-key (kbd "C-z") 'emacs-project-find)))
 
 (setq browse-url-browser-function 'browse-url-generic
@@ -379,7 +380,25 @@
 ;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
 ;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
 
-(global-set-key (kbd "C-c b") 'text-scale-increase)
-(global-set-key (kbd "C-c s") 'text-scale-decrease)
+(global-set-key (kbd "C-c +") 'text-scale-increase)
+(global-set-key (kbd "C-c -") 'text-scale-decrease)
 
 (global-set-key (kbd "C-c C-l") 'toggle_80_col_visual)
+
+(add-hook
+ 'go-mode-hook
+ (lambda ()
+   ;; (setq gofmt-command "goimports")
+   (local-set-key (kbd "M-.") 'godef-jump)
+   (go-guru-hl-identifier-mode)
+   ;;(add-hook 'before-save-hook 'gofmt-before-save)
+   ;;(add-hook 'go-mode-hook 'go-eldoc-setup)
+   ))
+
+;; disable touchpad
+(global-unset-key (kbd "<down-mouse-1>"))
+(global-unset-key (kbd "<mouse-1>"))
+(global-unset-key (kbd "<down-mouse-3>"))
+(global-unset-key (kbd "<mouse-3>"))
+(global-unset-key (kbd "<C-mouse-4>"))
+(global-unset-key (kbd "<C-mouse-5>"))

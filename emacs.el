@@ -53,7 +53,7 @@
 (require 'markerpen)
 (require 'haml-mode)
 (require 'sass-mode)
-(require 'csv-mode)
+;; (require 'csv-mode)
 (require 'js2-mode)
 (require 'ess-site)
 (require 'thrift-mode)
@@ -62,6 +62,7 @@
 
 (load "custom/view")
 (load "custom/additions")
+(load "custom/macros")
 (load "custom/behaviour")
 (load "custom/irc-startup")
 (load "~/.emacs.d/vendor/scratch-el/scratch.el")
@@ -75,7 +76,8 @@
 (load "custom/daddy")
 (load "custom/overrides.el")
 (require 'bison-mode)
-(require 'go-mode-autoloads)
+(autoload 'go-mode "go-mode" nil t)
 (require 'go-guru)
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (require 'string-inflection)

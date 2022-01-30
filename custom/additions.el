@@ -248,7 +248,7 @@
 
       ("u@micro" "μ")))
 
-(setq-default abbrev-mode t)
+(setq-default abbrev-mode nil)
 
 (defun color1 ()
   (interactive)
@@ -293,3 +293,11 @@
 (defun toggle_80_col_visual ()
   (interactive)
   (whitespace-toggle-options 'lines-tail))
+
+(defun new-scratch ()
+  "open up a new scratch buffer"
+  (interactive)
+  (switch-to-buffer (loop for num from 0
+                       for name = (format "blah-%03i" num)
+                       while (get-buffer name)
+                       finally return name)))

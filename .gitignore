@@ -17,3 +17,7 @@ abbrev_defs
 bookmarks
 elpa/*
 .mc-lists.el
+eshell
+projectile-bookmarks.eld
+projectile.cache
+server

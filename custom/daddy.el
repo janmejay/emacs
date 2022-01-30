@@ -16,7 +16,8 @@
 (define-minor-mode daddy-mode "A minor mode to arm-twist annoying major/minor modes."
   :lighter " daddy" :global t :keymap *daddy-mode-map*
   ;;(arm-twist-textmate-mode)
-)
+  (define-key *daddy-mode-map* (kbd "C-c +") 'text-scale-increase)
+  (define-key *daddy-mode-map* (kbd "C-c -") 'text-scale-decrease))
 
 (daddy-mode)
 
