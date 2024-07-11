@@ -16,9 +16,9 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/puppet"
-                   "~/.emacs.d/vendor/ecb"
-                   "~/.emacs.d/vendor/ess/lisp"
-                   ;;"~/.emacs.d/vendor/jde/lisp"
+                   ;; "~/.emacs.d/vendor/ecb"
+                   ;; "~/.emacs.d/vendor/ess/lisp"
+                   ;; "~/.emacs.d/vendor/jde/lisp"
                    "~/.emacs.d/vendor/slime"
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"
@@ -28,7 +28,9 @@
                    "~/.emacs.d/vendor/multiple-cursors"
                    "~/.emacs.d/vendor/vr"
                    "~/.emacs.d/vendor/vrs"
-                   "~/.emacs.d/vendor/string-inflections"))
+                   "~/.emacs.d/vendor/string-inflections"
+                   "~/.emacs.d/vendor/disable-mouse"
+                   "~/.emacs.d/vendor/tlamode/lisp"))
 (nconc exec-path '("~/bin"))
 
 (require 'cl-lib)
@@ -38,7 +40,7 @@
 (require 'ivy)
 (require 'find-file-in-project)
 
-(require 'ecb)
+;; (require 'ecb)
 
 
 ;;making rope available in python load path assuming pymacs is installed
@@ -55,7 +57,7 @@
 (require 'sass-mode)
 ;; (require 'csv-mode)
 (require 'js2-mode)
-(require 'ess-site)
+;; (require 'ess-site)
 (require 'thrift-mode)
 (require 'multiple-cursors)
 (require 'visual-regexp-steroids)
@@ -81,3 +83,17 @@
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (require 'string-inflection)
+
+(require 'disable-mouse)
+
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+;; RUN THIS THE VERY FIRST TIME ;;
+;; (package-refresh-contents)
+;; (package-install 'proof-general)
+;; (package-install 'company-coq)
+
+(require 'tla+-mode)
+(transient-mark-mode t)
