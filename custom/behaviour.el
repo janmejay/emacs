@@ -334,10 +334,10 @@
 (require 'scala-mode2)
 
 ;;stats
-(setq ess-smart-S-assign-key ":")
-(ess-toggle-S-assign nil)
-(ess-toggle-S-assign nil)
-(ess-toggle-underscore nil)
+;;(setq ess-smart-S-assign-key ":")
+;;(ess-toggle-S-assign nil)
+;;(ess-toggle-S-assign nil)
+;;(ess-toggle-underscore nil)
 
 ;;rust
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))

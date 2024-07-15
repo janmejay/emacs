@@ -15,9 +15,9 @@
                    "~/.emacs.d/vendor/yasnippet"
                    "~/.emacs.d/vendor/haml/extra"
                    "~/.emacs.d/vendor/puppet"
-                   "~/.emacs.d/vendor/ecb"
-                   "~/.emacs.d/vendor/ess/lisp"
-                   ;;"~/.emacs.d/vendor/jde/lisp"
+                   ;; "~/.emacs.d/vendor/ecb"
+                   ;; "~/.emacs.d/vendor/ess/lisp"
+                   ;; "~/.emacs.d/vendor/jde/lisp"
                    "~/.emacs.d/vendor/slime"
                    "~/.emacs.d/vendor/slime/contrib"
                    "~/.emacs.d/vendor/clojure"
@@ -39,7 +39,7 @@
 (require 'ivy)
 (require 'find-file-in-project)
 
-(require 'ecb)
+;; (require 'ecb)
 
 
 ;;making rope available in python load path assuming pymacs is installed
@@ -56,7 +56,7 @@
 (require 'sass-mode)
 ;; (require 'csv-mode)
 (require 'js2-mode)
-(require 'ess-site)
+;; (require 'ess-site)
 (require 'thrift-mode)
 (require 'multiple-cursors)
 (require 'visual-regexp-steroids)
