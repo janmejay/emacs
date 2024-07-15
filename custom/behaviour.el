@@ -402,3 +402,6 @@
 (global-unset-key (kbd "<mouse-3>"))
 (global-unset-key (kbd "<C-mouse-4>"))
 (global-unset-key (kbd "<C-mouse-5>"))
+;; (global-disable-mouse-mode)
+
+(define-key local-function-key-map (kbd "<escape>") nil)

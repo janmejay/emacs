@@ -8,7 +8,6 @@
                    "~/.emacs.d/vendor/linum"
                    "~/.emacs.d/vendor/goodies"
                    "~/.emacs.d/vendor/goodies/test-runner"
-                   "~/.emacs.d/vendor/rust"
                    "~/.emacs.d/vendor/collection"
                    "~/.emacs.d/vendor/collection/ruby"
                    "~/.emacs.d/vendor/collection/js2-mode"
@@ -28,7 +27,9 @@
                    "~/.emacs.d/vendor/multiple-cursors"
                    "~/.emacs.d/vendor/vr"
                    "~/.emacs.d/vendor/vrs"
-                   "~/.emacs.d/vendor/string-inflections"))
+                   "~/.emacs.d/vendor/string-inflections"
+                   "~/.emacs.d/vendor/disable-mouse"
+                   "~/.emacs.d/vendor/tlamode/lisp"))
 (nconc exec-path '("~/bin"))
 
 (require 'cl-lib)
@@ -81,3 +82,17 @@
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (require 'string-inflection)
+
+(require 'disable-mouse)
+
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+;; RUN THIS THE VERY FIRST TIME ;;
+;; (package-refresh-contents)
+;; (package-install 'proof-general)
+;; (package-install 'company-coq)
+
+(require 'tla+-mode)
+(transient-mark-mode t)

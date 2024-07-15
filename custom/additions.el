@@ -301,3 +301,5 @@
                        for name = (format "blah-%03i" num)
                        while (get-buffer name)
                        finally return name)))
+
+(add-hook 'coq-mode-hook #'company-coq-mode)
