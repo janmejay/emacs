@@ -112,3 +112,6 @@
 [submodule "vendor/emacs-rust-config"]
 	path = vendor/emacs-rust-config
 	url = https://github.com/rksm/emacs-rust-config
+[submodule "vendor/tlamode"]
+	path = vendor/tlamode
+	url = https://git.sdf.org/bch/tlamode.git
