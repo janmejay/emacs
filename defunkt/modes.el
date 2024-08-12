@@ -3,7 +3,7 @@
 (load "defunkt/ruby")
 (load "defunkt/shell")
 (load "defunkt/javascript")
-(load "defunkt/erlang")
+;; (load "defunkt/erlang")
 
 ; bash
 (setq auto-mode-alist (cons '("\\.bashrc" . sh-mode) auto-mode-alist))
