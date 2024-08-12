@@ -1,35 +1,35 @@
 (setq overrides nil)
 
-(nconc load-path '("~/.emacs.d"
-                   "~/.emacs.d/vendor"
-                   "~/.emacs.d/vendor/async"
-                   "~/.emacs.d/vendor/swiper"
-                   "~/.emacs.d/vendor/find-file-in-project"
-                   "~/.emacs.d/vendor/linum"
-                   "~/.emacs.d/vendor/goodies"
-                   "~/.emacs.d/vendor/goodies/test-runner"
-                   "~/.emacs.d/vendor/collection"
-                   "~/.emacs.d/vendor/collection/ruby"
-                   "~/.emacs.d/vendor/collection/js2-mode"
-                   "~/.emacs.d/vendor/rinari"
-                   "~/.emacs.d/vendor/yasnippet"
-                   "~/.emacs.d/vendor/haml/extra"
-                   "~/.emacs.d/vendor/puppet"
-                   ;; "~/.emacs.d/vendor/ecb"
-                   ;; "~/.emacs.d/vendor/ess/lisp"
-                   ;; "~/.emacs.d/vendor/jde/lisp"
-                   "~/.emacs.d/vendor/slime"
-                   "~/.emacs.d/vendor/slime/contrib"
-                   "~/.emacs.d/vendor/clojure"
-                   "~/.emacs.d/vendor/scala-mode2"
-                   "~/.emacs.d/vendor/go"
-                   "~/.emacs.d/vendor/thrift-mode"
-                   "~/.emacs.d/vendor/multiple-cursors"
-                   "~/.emacs.d/vendor/vr"
-                   "~/.emacs.d/vendor/vrs"
-                   "~/.emacs.d/vendor/string-inflections"
-                   "~/.emacs.d/vendor/disable-mouse"
-                   "~/.emacs.d/vendor/tlamode/lisp"))
+(nconc load-path '("~/.my.emacs.d"
+                   "~/.my.emacs.d/vendor"
+                   "~/.my.emacs.d/vendor/async"
+                   "~/.my.emacs.d/vendor/swiper"
+                   "~/.my.emacs.d/vendor/find-file-in-project"
+                   "~/.my.emacs.d/vendor/linum"
+                   "~/.my.emacs.d/vendor/goodies"
+                   "~/.my.emacs.d/vendor/goodies/test-runner"
+                   "~/.my.emacs.d/vendor/collection"
+                   "~/.my.emacs.d/vendor/collection/ruby"
+                   "~/.my.emacs.d/vendor/collection/js2-mode"
+                   "~/.my.emacs.d/vendor/rinari"
+                   "~/.my.emacs.d/vendor/yasnippet"
+                   "~/.my.emacs.d/vendor/haml/extra"
+                   "~/.my.emacs.d/vendor/puppet"
+                   ;; "~/.my.emacs.d/vendor/ecb"
+                   ;; "~/.my.emacs.d/vendor/ess/lisp"
+                   ;; "~/.my.emacs.d/vendor/jde/lisp"
+                   "~/.my.emacs.d/vendor/slime"
+                   "~/.my.emacs.d/vendor/slime/contrib"
+                   "~/.my.emacs.d/vendor/clojure"
+                   "~/.my.emacs.d/vendor/scala-mode2"
+                   "~/.my.emacs.d/vendor/go"
+                   "~/.my.emacs.d/vendor/thrift-mode"
+                   "~/.my.emacs.d/vendor/multiple-cursors"
+                   "~/.my.emacs.d/vendor/vr"
+                   "~/.my.emacs.d/vendor/vrs"
+                   "~/.my.emacs.d/vendor/string-inflections"
+                   "~/.my.emacs.d/vendor/disable-mouse"
+                   "~/.my.emacs.d/vendor/tlamode/lisp"))
 (nconc exec-path '("~/bin"))
 
 (require 'cl-lib)
@@ -44,8 +44,8 @@
 
 ;;making rope available in python load path assuming pymacs is installed
 ;;if not, use your OS' package manager to get it. (on gentoo i use app-emacs/pymacs)
-;; (setq pymacs-load-path '("~/.emacs.d/vendor/rope"
-;;                          "~/.emacs.d/vendor/ropemacs"))
+;; (setq pymacs-load-path '("~/.my.emacs.d/vendor/rope"
+;;                          "~/.my.emacs.d/vendor/ropemacs"))
 
 ;;elib must be installed locally (debian (elib) and gentoo (app-emacs/elib) have it available as a package)
 
@@ -66,7 +66,7 @@
 (load "custom/macros")
 (load "custom/behaviour")
 (load "custom/irc-startup")
-(load "~/.emacs.d/vendor/scratch-el/scratch.el")
+(load "~/.my.emacs.d/vendor/scratch-el/scratch.el")
 (load "puppet-mode-init")
 
 (autoload 'rust-mode "rust-mode" nil t)
