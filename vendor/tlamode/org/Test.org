@@ -1,0 +1,43 @@
+* This is an Org file
+** TLA+ with Org
+This is an attempt to combine Org-Mode Babel with TLA+.
+
+Keyboard Shortcuts:
+
+| Keystroke | Description             |
+|-----------+-------------------------|
+| c-c c-t c | SANY Syntactic Analyzer |
+| c-c c-t e | Export DVI              |
+| c-c c-t o | Open DVI file           |
+| c-c c-t m | run TLC model checker   |
+| c-c c-t p | run PlusCal Translator  |
+
+** Modul1 with descriptions
+
+uyam erat, sed diam voluptua. At *vero* eos et accusam et justo duo
+dolores et ea rebum. _Stet_ clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet. 
+
+- Unordered List
+  - a
+  - b
+- Unordered
+
+Use: ~org-babel-tangle~ to export the module above:
+
+#+BEGIN_SRC tla+ :tangle TestModul.tla
+  ------------------- MODULE TestModul -----------------------
+  EXTENDS Naturals
+  VARIABLE hr
+  ------------------------------------------------------------
+  Init == hr \in (1..12)
+  Next == hr' = IF hr = 12 THEN
+		   1
+		ELSE
+		   hr + 1
+  ------------------------------------------------------------
+  Spec == Init /\ [][Next]_hr
+  ============================================================
+  \* Modification History
+  \* Created Mon Aug  3 03:46:40 2020 by Christian Barthel
+#+END_SRC

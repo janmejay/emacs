@@ -1,0 +1,54 @@
+2020-08-27  Christian Barthel  <bch@online.de>
+
+	* lisp/tla+-mode.el (tla+-java-path):
+	(tla+-dot-binary):
+	remove some default paths that may be not useful or
+	helpful for other users.
+	(tla+-run-sany):
+	(tla+-run-model):
+	(tla+-run-pluscal):
+	(tla+-run-tlatex):
+	(tla+-run-model): add an error check (if the
+	tla+-tlatools-path is not set, print an error message)
+	(tla+-run-dot): run dot only when the binary to dot
+	is given.
+
+
+2020-08-03  Christian Barthel  <bch@online.de>
+
+	* org/Test.org: add an example org file.
+	this shows the usage of org-babel-tangle in
+	combination with TLA+ (it may be used to
+	further comment on TLA+ specifications).
+
+	* lisp/tla+-mode.el: update URLs, remove
+	unnecessary comments, cleanup whitespace and
+	wrap lines.
+	(tlc-widget-example): if a TLC cfg already
+	exists, copy it to .old.<seconds>.  erase
+	the buffer then and insert the new TLC
+	config into the buffer.
+	Add the current time to the tlc config.
+
+2020-08-02  Christian Barthel  <bch@online.de>
+
+	* lisp/tla+-mode.el (tla+-tlc-depth): tune depth
+	parameter, default to 1000 now.
+	(tla+-tlc-workers): tune worker threads (at least
+	2 threads should be used by default)
+	(tla+-dot-convert, tla+-dot-binary): dot(1)
+	customization variables.
+	(tla+-run-dot): elisp function to run dot(1) and
+	convert the state graph to a PNG file
+	(tla+-run-model): automatically generate the PNG
+	output file, change  the window handling.  It
+	seems better to only show the tlc buffer output
+	once (when it is a newly created buffer).  The
+	user may kill it, or arrange it in such a way
+	that the output can be read by another tlc model
+	check run.  Also: set the bufffer to readonly.
+	(tlc-widget-example): remove the cfgname; seems
+	that the lambda expressions do not see the cfgname
+	anyway so I have to reconstruct it.
+
+

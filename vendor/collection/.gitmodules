@@ -1,0 +1,132 @@
+[submodule "haskell-mode"]
+	path = haskell-mode
+	url = git://github.com/haskell/haskell-mode.git
+[submodule "helm"]
+	path = helm
+	url = git://github.com/emacs-helm/helm.git
+[submodule "magit"]
+	path = magit
+	url = git://github.com/magit/magit.git
+[submodule "erlang"]
+	path = erlang
+	url = git://github.com/emacsmirror/erlang.git
+[submodule "emacs-color-theme-solarized"]
+	path = emacs-color-theme-solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "evil"]
+	path = evil
+	url = git://github.com/emacsmirror/evil.git
+[submodule "auto-complete"]
+	path = auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule "popup-el"]
+	path = popup-el
+	url = git://github.com/auto-complete/popup-el.git
+[submodule "flymake"]
+	path = flymake
+	url = git://github.com/illusori/emacs-flymake.git
+[submodule "flymake-ruby"]
+	path = flymake-ruby
+	url = git://github.com/purcell/flymake-ruby.git
+[submodule "js2-mode"]
+	path = js2-mode
+	url = git://github.com/mooz/js2-mode.git
+[submodule "smart-compile-plus"]
+	path = smart-compile-plus
+	url = git://github.com/emacsmirror/smart-compile-plus.git
+[submodule "sass-mode"]
+	path = sass-mode
+	url = git://github.com/emacsmirror/sass-mode.git
+[submodule "toggle"]
+	path = toggle
+	url = git://github.com/emacsmirror/toggle.git
+[submodule "wgrep"]
+	path = wgrep
+	url = git://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "yaml-mode"]
+	path = yaml-mode
+	url = git://github.com/yoshiki/yaml-mode.git
+[submodule "session"]
+	path = session
+	url = git://github.com/tarsius/session.git
+[submodule "chuck-mode"]
+	path = chuck-mode
+	url = git://github.com/emacsmirror/chuck-mode.git
+[submodule "expand-region"]
+	path = expand-region
+	url = git://github.com/magnars/expand-region.el.git
+[submodule "mark-multiple"]
+	path = mark-multiple
+	url = git://github.com/magnars/mark-multiple.el.git
+[submodule "rhtml"]
+	path = rhtml
+	url = git://github.com/eschulte/rhtml.git
+[submodule "markdown-mode"]
+	path = markdown-mode
+	url = git://github.com/nex3/markdown-mode.git
+[submodule "rvm"]
+	path = rvm
+	url = git://github.com/senny/rvm.el.git
+[submodule "flymake-cursor"]
+	path = flymake-cursor
+	url = git://github.com/emacsmirror/flymake-cursor.git
+[submodule "ruby-end"]
+	path = ruby-end
+	url = git://github.com/janmejay/ruby-end.git
+[submodule "ruby-electric"]
+	path = ruby-electric
+	url = git://github.com/qoobaa/ruby-electric.git
+[submodule "yasnippet"]
+	path = yasnippet
+	url = git://github.com/capitaomorte/yasnippet.git
+[submodule "multiple-cursors"]
+	path = multiple-cursors
+	url = git://github.com/magnars/multiple-cursors.el.git
+[submodule "elnode"]
+	path = elnode
+	url = git://github.com/nicferrier/elnode.git
+[submodule "pig-mode"]
+	path = pig-mode
+	url = https://github.com/motus/pig-mode
+[submodule "frame-fns"]
+	path = frame-fns
+	url = git://github.com/emacsmirror/frame-fns.git
+[submodule "frame-cmds"]
+	path = frame-cmds
+	url = git://github.com/emacsmirror/frame-cmds.git
+[submodule "clojure-mode"]
+	path = clojure-mode
+	url = git://github.com/technomancy/clojure-mode.git
+[submodule "twitter"]
+	path = twitter
+	url = git://git.busydoingnothing.co.uk/twitter.git
+[submodule "emacs-oauth"]
+	path = emacs-oauth
+	url = git://github.com/psanford/emacs-oauth.git
+[submodule "auto-complete-clang"]
+	path = auto-complete-clang
+	url = git://github.com/brianjcj/auto-complete-clang.git
+[submodule "paredit"]
+	path = paredit
+	url = git://github.com/emacsmirror/paredit.git
+[submodule "slime"]
+	path = slime
+	url = git://github.com/emacsmirror/slime.git
+[submodule "ac-slime"]
+	path = ac-slime
+	url = git://github.com/purcell/ac-slime.git
+[submodule "ritz"]
+	path = ritz
+	url = git://github.com/pallet/ritz.git
+[submodule "ac-nrepl"]
+	path = ac-nrepl
+	url = git://github.com/purcell/ac-nrepl.git
+[submodule "nrepl.el"]
+	path = nrepl.el
+	url = git://github.com/kingtim/nrepl.el.git
+[submodule "actionscript-mode"]
+	path = actionscript-mode
+	url = git://github.com/austinhaas/actionscript-mode.git
+[submodule "haml-mode"]
+	path = haml-mode
+	url = git://github.com/nex3/haml-mode.git
