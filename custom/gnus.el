@@ -22,7 +22,7 @@
     (call-process-region (point-min) (point-max) 
                          "xsltproc" 
                          t t nil 
-                         (expand-file-name "~/.emacs.d/vendor/atom2rss.xsl") "-")
+                         (expand-file-name "~/.my.emacs.d/vendor/atom2rss.xsl") "-")
     (goto-char (point-min))
     (message "Converting Atom to RSS... done")))
 

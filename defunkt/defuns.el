@@ -15,8 +15,10 @@
 (defun defunkt-ido-find-config ()
   (interactive)
   (find-file
-   (concat "~/.emacs.d/defunkt/" (ido-completing-read "Config file: "
-                                   (directory-files "~/.emacs.d/defunkt/" nil "^[^.]")))))
+   (concat "~/.my.emacs.d/defunkt/"
+           (ido-completing-read
+            "Config file: "
+            (directory-files "~/.my.emacs.d/defunkt/" nil "^[^.]")))))
 
 (defun defunkt-ido-find-project ()
   (interactive)
@@ -26,7 +28,7 @@
 
 (defun defunkt-goto-config ()
   (interactive)
-  (find-file "~/.emacs.d/defunkt.el"))
+  (find-file "~/.my.emacs.d/defunkt.el"))
 
 ;; fix kill-word
 (defun defunkt-kill-word (arg)
@@ -74,9 +76,9 @@
 ; for loading libraries in from the vendor directory
 (defun vendor (library)
   (let* ((file (symbol-name library)) 
-         (normal (concat "~/.emacs.d/vendor/" file)) 
+         (normal (concat "~/.my.emacs.d/vendor/" file)) 
          (suffix (concat normal ".el"))
-         (defunkt (concat "~/.emacs.d/defunkt/" file)))
+         (defunkt (concat "~/.my.emacs.d/defunkt/" file)))
     (cond 
      ((file-directory-p normal) (add-to-list 'load-path normal) (require library))
      ((file-directory-p suffix) (add-to-list 'load-path suffix) (require library))

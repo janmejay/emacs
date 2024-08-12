@@ -27,7 +27,7 @@
     (enable-ecb-and-switch-to-dir-window))
   (setq ecb-is-enabled (not ecb-is-enabled)))
 
-(load "~/.emacs.d/custom/var_customization.el")
+(load "~/.my.emacs.d/custom/var_customization.el")
 
 ;;(ecb-layout-switch "left3")
 ;;(ecb-activate)

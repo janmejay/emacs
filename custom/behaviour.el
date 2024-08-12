@@ -25,7 +25,8 @@
 
 ;;;;;;;;; yasnippet
 (require 'yasnippet)
-(setq yas/snippet-dirs '("~/.emacs.d/vendor/yasnippet/snippets" "~/.emacs.d/custom/snippets"))
+(setq yas/snippet-dirs '("~/.my.emacs.d/vendor/yasnippet/snippets"
+                         "~/.my.emacs.d/custom/snippets"))
 (yas/global-mode 1)
 (setq yas/prompt-functions '(yas/ido-prompt yas/x-prompt yas/dropdown-prompt))
 
